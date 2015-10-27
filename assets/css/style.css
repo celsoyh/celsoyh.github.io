@@ -3,7 +3,7 @@ html, body {
 }
 #row-1 {
 	height: 100%;
-	background: linear-gradient(to bottom, #f6f7fc 0%, white 100%);
+	background: linear-gradient(to top, #EFEFEF 0%, white 100%);
 	transform-style: preserve-3d;
 	transform: perspective(800px);
 }
