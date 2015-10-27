@@ -16,9 +16,3 @@ html, body {
 #row-2 {
 	height: 100%;
 }
-
-@media (max-width: 480px) {
-	#row-1 .atvImg {
-		width: 90%;
-	}
-}
