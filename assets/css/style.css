@@ -1,0 +1,21 @@
+html, body {
+	height: 100%;
+}
+#row-1 {
+	height: 100%;
+	background: linear-gradient(to top, #f6f7fc 0%, #d5e1e8 40%);
+	transform-style: preserve-3d;
+	transform: perspective(800px);
+}
+#row-1 .atvImg {
+	width: 500px;
+	height: 300px;
+	margin: 10% auto;
+}
+
+
+@media (max-width: 480px) {
+	#row-1 .atvImg {
+		width: 90%;
+	}
+}
