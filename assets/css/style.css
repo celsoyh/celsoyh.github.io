@@ -3,9 +3,11 @@ html, body {
 }
 #row-1 {
 	height: 100%;
-	background: linear-gradient(to top, #EFEFEF 0%, white 60%);
+	/*background: linear-gradient(to top, #EFEFEF 0%, white 60%);
 	transform-style: preserve-3d;
-	transform: perspective(800px);
+	transform: perspective(800px);*/
+	background-image: url(../images/background-1.jpeg);
+	background-size: cover;
 }
 
 #row-1 .center-wrapper {
