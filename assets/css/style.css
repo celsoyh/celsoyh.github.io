@@ -10,10 +10,12 @@ html, body {
 	background-size: cover;
 }
 
-#row-1 .center-wrapper {
-	
+#row-1 h1,
+#row-1 p,
+#row-1 p a {
+	color: #242424;
 }
 
-#row-1 .center-wrapper .warning {
-	
+#row-1 p a {
+	text-decoration: underline;
 }
