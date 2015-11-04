@@ -1,0 +1,304 @@
+/*Remove estilo do BS3*/
+
+.navbar-default {
+    background-color: transparent;
+    border-color: transparent;
+    box-shadow: none;
+    background-image: none;
+}
+
+.navbar-nav {
+    float: right;
+}
+
+#header .row {
+    padding: 3% 0;
+}
+
+#header .button-wrapper {
+    padding: 3% 0;
+}
+
+#header .button-large {
+    background-color: #000000;
+    border: none;
+    color: #ffffff;
+    -webkit-transition: all 0.2s ease-in-out;
+    -o-transition: all 0.2s ease-in-out;
+    transition: all 0.2s ease-in-out;
+}
+
+#header .button-large:hover {
+    background-color: #f1bd00;
+}
+
+#header ul li {
+    width: 232px;
+}
+
+#header ul li a {
+    color: #FFFFFF;
+    font-family: Arial Bold, Arial, sans-serif;
+    font-size: 12px;
+    font-weight: bold;
+    margin: 0 2%;
+    text-align: center;
+    padding: 5px;
+    -webkit-transition: all 0.2s ease-in-out;
+    -o-transition: all 0.2s ease-in-out;
+    transition: all 0.2s ease-in-out;
+}
+
+#header ul li a:hover {
+    color: #000000;
+}
+
+
+/*Section 1*/
+
+#section-1 .slider {
+    background-color: #f1bd00;
+}
+
+#section-1 .slider .text-wrapper {
+    display: block;
+    margin: 10% auto;
+    width: 65%;
+}
+
+#section-1 .slider .text-wrapper h1 {
+    color: #FFFFFF;
+    font-size: 80px;
+    font-weight: bold;
+    line-height: 54px;
+    text-transform: uppercase;
+    text-shadow: 3px 3px 2px rgba(0, 0, 0, 0.2);
+}
+
+#section-1 .slider .text-wrapper h1 span {
+    font-size: 50px;
+}
+
+#section-1 .slider .text-wrapper p {
+    font-size: 15px;
+    line-height: 20px;
+    text-transform: uppercase;
+}
+
+#section-1 .slider .portrait-1 {
+    display: block;
+    margin: 5% auto;
+}
+
+
+/*Section 2*/
+
+#section-2 .product-container {
+    padding: 5% 5%;
+    text-align: center;
+    -webkit-transition: all 0.2s ease-in-out;
+    -o-transition: all 0.2s ease-in-out;
+    transition: all 0.2s ease-in-out;
+}
+#section-2 nav ul {
+    padding: 0;
+}
+#section-2 nav ul li {
+    list-style: none;
+}
+
+#section-2 nav ul li {
+    border: 1px solid grey;
+}
+
+#section-2 .product-container .img-responsive {
+    margin: 0 auto;
+}
+
+#section-2 .product-container:hover {
+    background: #f3f3f3;
+}
+
+#section-2 .product-container strike {
+    color: grey;
+    font-style: italic;
+    font-size: 10px;
+}
+
+#section-2 .product-container .product-name {
+    display: block;
+    margin: 5% auto;
+    width: 75%;
+    height: 50px;
+}
+
+#section-2 .product-container .product-name p {
+    font-family: Arial, sans-serif;
+    font-weight: bold;
+}
+
+#section-2 .product-container .price-content {
+    margin-top: 5%;
+}
+
+#section-2 .product-container .price-content p {
+    font-family: Arial, sans-serif;
+    font-size: 12px;
+    font-style: italic;
+    margin: 0;
+}
+
+#section-2 .product-container .checkout-button {
+    width: 123px;
+    height: 33px;
+    background: url(../imgs/botao-comprar.jpg) top no-repeat;
+    border: 0px;
+    margin: 5% 0;
+    text-indent: -9999px;
+    -webkit-transition: all 0.2s ease-in-out;
+    -o-transition: all 0.2s ease-in-out;
+    transition: all 0.2s ease-in-out;
+}
+
+#section-2 .product-container .checkout-button:hover {
+    opacity: 0.8;
+}
+
+#section-2 .product-container .checkout-button:active {
+    opacity: 1;
+}
+
+
+/*Ajuste Margin em produtos promocionais*/
+
+#section-2 .promocao .price-content {
+    margin-top: 0;
+}
+
+#section-2 .promocao .checkout-button {
+    margin-top: 3px;
+}
+
+
+/*Footer*/
+
+footer {
+    background: url(../imgs/footer-pattern.jpg);
+    padding: 4% 0;
+}
+
+footer p {
+    color: #606262;
+    font-family: Arial, sans-serif;
+    font-size: 14px;
+    line-height: 24px;
+    margin: 0;
+}
+
+footer .telefone {
+    color: #000000;
+    font-weight: bold;
+}
+
+footer .row button {
+    width: 179px;
+    height: 41px;
+    margin: 2% 0;
+    border: 0;
+    /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#e89900+0,ffca00+100 */
+    background: #e89900;
+    /* Old browsers */
+    background: -moz-linear-gradient(top, #e89900 0%, #ffca00 100%);
+    /* FF3.6+ */
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #e89900), color-stop(100%, #ffca00));
+    /* Chrome,Safari4+ */
+    background: -webkit-linear-gradient(top, #e89900 0%, #ffca00 100%);
+    /* Chrome10+,Safari5.1+ */
+    background: -o-linear-gradient(top, #e89900 0%, #ffca00 100%);
+    /* Opera 11.10+ */
+    background: -ms-linear-gradient(top, #e89900 0%, #ffca00 100%);
+    /* IE10+ */
+    background: linear-gradient(to bottom, #e89900 0%, #ffca00 100%);
+    /* W3C */
+    filter: progid: DXImageTransform.Microsoft.gradient( startColorstr='#e89900', endColorstr='#ffca00', GradientType=0);
+    /* IE6-9 */
+    -webkit-transition: all 0.5s ease-in-out;
+    -o-transition: all 0.5s ease-in-out;
+    transition: all 0.5s ease-in-out;
+}
+
+footer .row button:hover {
+    /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#ffca00+0,e89900+100 */
+    background: #ffca00;
+    /* Old browsers */
+    background: -moz-linear-gradient(top, #ffca00 0%, #e89900 100%);
+    /* FF3.6+ */
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #ffca00), color-stop(100%, #e89900));
+    /* Chrome,Safari4+ */
+    background: -webkit-linear-gradient(top, #ffca00 0%, #e89900 100%);
+    /* Chrome10+,Safari5.1+ */
+    background: -o-linear-gradient(top, #ffca00 0%, #e89900 100%);
+    /* Opera 11.10+ */
+    background: -ms-linear-gradient(top, #ffca00 0%, #e89900 100%);
+    /* IE10+ */
+    background: linear-gradient(to bottom, #ffca00 0%, #e89900 100%);
+    /* W3C */
+    filter: progid: DXImageTransform.Microsoft.gradient( startColorstr='#ffca00', endColorstr='#e89900', GradientType=0);
+    /* IE6-9 */
+}
+
+
+/*Media Queries*/
+
+@media (max-width: 768px) {
+    .navbar-nav {
+        float: none;
+    }
+    #header ul li {
+        margin: 2% auto;
+    }
+    #section-1 .slider .text-wrapper {
+        width: 100%;
+    }
+    .slick-next {
+        right: 0;
+    }
+    .slick-prev {
+        left: 0;
+        z-index: 10;
+    }
+    .slick-prev:before,
+    .slick-next:before {
+        color: black;
+    }
+    footer .row button {
+        display: block;
+        margin: 2% auto;
+    }
+}
+
+@media (max-width: 480px) {
+    .navbar-nav {
+        float: none;
+    }
+    #header ul li {
+        margin: 2% auto;
+    }
+    #section-1 .slider .text-wrapper {
+        width: 100%;
+    }
+    .slick-next {
+        right: 0;
+    }
+    .slick-prev {
+        left: 0;
+    }
+    .slick-prev:before,
+    .slick-next:before {
+        color: black;
+    }
+    footer .row button {
+        display: block;
+        margin: 2% auto;
+    }
+}
