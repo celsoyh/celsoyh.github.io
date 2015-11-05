@@ -1,0 +1,26 @@
+html, body {
+	height: 100%;
+	background: url(../images/contemporary_china.png);
+}
+
+#section-1 .project-wrapper {
+	display: block;
+	margin: 2% auto;
+	background-color: rgba(0,0,0,0.1);
+	padding: 15px;	
+	border-radius: 5px;
+}
+#section-1 .project-wrapper nav {
+	background-color: rgba(255,255,255,0.3);
+	border-radius: 5px;
+	padding: 15px;	
+}
+
+#section-1 .project-wrapper nav ul li {
+	list-style: circle;
+}
+
+#section-1 .project-wrapper nav ul li a {
+	color: #333333;
+	text-decoration: none;
+}
