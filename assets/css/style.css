@@ -6,7 +6,7 @@ html, body {
 	/*background: linear-gradient(to top, #EFEFEF 0%, white 60%);
 	transform-style: preserve-3d;
 	transform: perspective(800px);*/
-	background-image: url(../images/background-8.jpeg);
+	background-image: url(../images/background-3.jpeg);
 	background-size: cover;
 }
 
@@ -18,4 +18,28 @@ html, body {
 
 #row-1 p a {
 	text-decoration: underline;
+}
+
+#row-1 .social {
+	margin: 0 auto;
+	text-align: center;
+}
+
+#row-1 .social ul {
+	padding: 0;
+}
+
+#row-1 .social ul li {
+	display: inline-block;
+	font-size: 3em;
+	margin: 0 1%;
+}
+
+#row-1 .social ul li a {
+	color: #333;
+}
+
+#row-1 .social ul li a:hover,
+#row-1 .social ul li a:visited {
+	text-decoration: none;
 }
