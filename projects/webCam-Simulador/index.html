@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Consultor Virtual</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <header class="topo">
+    </header>
+    <main class="container">
+        <div class="in">
+            <aside class="left">
+                <div class="logo">
+                    <img src="imagens/consulto-virtual.png" height="100" width="227" alt="">
+                </div>
+                <article class="descricao-produto">
+                    <h1>RAY BAN</h1>
+                    <p>Praesent quis fermentum magna morbi gravida lorem a est tempor feugiat. Praesent massa diam, laoreet et consequat non, elementum at lorem. Donec eleifend sapien vel risus sagittis, id venenatis velit dictum nam sollicitudin, nisl at luctus pharetra,</p>
+                    <div class="btn-comprar">
+                        <a href="#">Comprar</a>
+                    </div>
+                </article>
+            </aside>
+            <section class="right">
+                <div class="camera" id="cam">
+                    <div id="my_camera"></div>
+                    <img id="fotoPerfil" src="imagens/foto-padrao.jpeg" alt="">
+                    <form>
+                        <input type=button value="TIRAR FOTO" onClick="take_snapshot()" class="tirar-foto">
+                        <div class="upload-box">
+                        	<input type='file' onchange="readURL(this);" class="subir-foto" name="sua foto"/>
+                        </div>
+                    </form>
+                </div>
+                <div id="results" class="resultado"></div>
+                <div class="carousel">
+                    <div id="glass-container">
+                        <div class="item">
+                            <figure class="oculos">
+                                <img src="imagens/oculos.png" alt="">
+                            </figure>
+                        </div>
+                        <div class="item">
+                            <figure class="oculos">
+                                <img src="imagens/oculos2.png" alt="">
+                            </figure>
+                        </div>
+                        <div class="item">
+                            <figure class="oculos">
+                                <img src="imagens/oculos3.png" alt="">
+                            </figure>
+                        </div>
+                        <div class="item">
+                            <figure class="oculos">
+                                <img src="imagens/oculos4.png" alt="">
+                            </figure>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </main>
+    <footer class="rodape">
+    </footer>
+    <script src="js/jquery.min.js"></script>
+    <script src="js/webcam.min.js"></script>
+    <script src="js/draggabilly.pkgd.min.js"></script>
+    <script src="js/interact.min.js"></script>
+    <script src="js/owl.js"></script>
+    <script src="js/script.js"></script>
+</body>
+
+</html>
