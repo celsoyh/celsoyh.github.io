@@ -14,11 +14,14 @@ body {
 }
 
 .topo {
-    width: 100%;
+    width: 1310px;
     height: 117px;
     background-image: url("../imagens/topo.jpg");
     background-repeat: no-repeat;
-    background-size: 100%;
+    background-position: center top;
+    background-attachment: fixed;
+    display: block;
+    margin: 0 auto;
 }
 
 .container {
@@ -26,7 +29,7 @@ body {
 }
 
 .in {
-    width: 78%;
+    width: 1025px;
     margin: 0 auto;
     display: flex;
     background-image: url("../imagens/bg-main.jpg");
@@ -148,11 +151,12 @@ div.upload-box input {
 }
 
 .rodape {
-    width: 100%;
+    width: 1310px;
     height: 338px;
     background-image: url("../imagens/rodape.jpg");
     background-repeat: no-repeat;
     background-size: 100%;
+    margin: 0 auto;
 }
 
 
