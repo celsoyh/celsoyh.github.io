@@ -96,7 +96,7 @@ $(document).ready(function($) {
     =            Menu Mob funcions            =
     =========================================*/
 
-    $('.mob-menu').on('click', function(event) {
+    $('.mob-menu, .menu-btn a:before, .menu-btn a:after').on('click', function(event) {
         event.preventDefault();
         /* Act on the event */
         $(this).toggleClass('active')
