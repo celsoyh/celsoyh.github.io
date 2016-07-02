@@ -1,0 +1,332 @@
+body {
+    font-family: $roboto;
+    font-size: 1.2rem;
+    background: #f5f3f3;
+    .container {
+        position: relative;
+        box-sizing: border-box;
+        width: 100%;
+        max-width: 940px;
+        margin: 0 auto;
+        .tab-selector {
+            padding: 5% 2% 2%;
+            color: #666;
+            p {
+                font-size: 1.3rem;
+                display: inline-block;
+            }
+            &__container {
+                font-size: 1.4rem;
+                display: inline-block;
+                margin-left: 2%;
+                border-top-left-radius: 5px;
+                border-top-right-radius: 5px;
+                background: #fff;
+                ul {
+                    li {
+                        display: inline-block;
+                        padding: 5px;
+                        a {
+                            text-decoration: none;
+                            color: #9e9d9d;
+                            &#view-lista {
+                                position: relative;
+                                &:after {
+                                    position: absolute;
+                                    top: 2px;
+                                    right: -8px;
+                                    width: 1px;
+                                    height: 15px;
+                                    content: '';
+                                    background: #dfdfdf;
+                                }
+                            }
+                            i {
+                                &.list-icon {
+                                    &:before {
+                                        font-family: 'icons';
+                                        font-size: 1.4rem;
+                                        content: '\e61d';
+                                    }
+                                }
+                                &.gallery-icon {
+                                    &:before {
+                                        font-family: 'icons';
+                                        font-size: 2rem;
+                                        line-height: 1px;
+                                        content: '\e61e';
+                                        vertical-align: middle;
+                                    }
+                                }
+                            }
+                        }
+                        &.active {
+                            border-bottom: 1px solid #32bcd0;
+                            a {
+                                color: #626262;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        .item {
+            padding: 20px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            background: #fff;
+            transition: all .3s ease-in-out;
+            &.gallery {
+                float: left;
+                overflow: hidden;
+                width: 300px;
+                height: 259px;
+                padding: 0;
+                .row {
+                    width: 100%;
+                    height: 100%;
+                    .twelve.columns {
+                        position: relative;
+                        width: 100%;
+                        height: 100%;
+                        .five {
+                            width: 100%;
+                            height: 100%;
+                            .description {
+                                figure {
+                                    img {
+                                        position: absolute;
+                                        top: 0;
+                                        right: 0;
+                                        bottom: 0;
+                                        left: 0;
+                                        display: block;
+                                        width: 100%;
+                                        height: 100%;
+                                        margin: auto;
+                                    }
+                                    figcaption {
+                                        position: absolute;
+                                        bottom: 0;
+                                        box-sizing: border-box;
+                                        width: 100%;
+                                        padding: 0 20px 20px 20px;
+                                        background: -webkit-gradient(linear, left top, left bottom, color-stop(0, transparent), color-stop(1%, transparent), color-stop(23%, rgba(0, 0, 0, .3)), color-stop(58%, rgba(0, 0, 0, .5)), color-stop(100%, rgba(0, 0, 0, .7)));
+                                        background: -webkit-linear-gradient(top, transparent 0, transparent 1%, rgba(0, 0, 0, .3) 23%, rgba(0, 0, 0, .5) 58%, rgba(0, 0, 0, .7) 100%);
+                                        background: linear-gradient(to bottom, transparent 0, transparent 1%, rgba(0, 0, 0, .3) 23%, rgba(0, 0, 0, .5) 58%, rgba(0, 0, 0, .7) 100%);
+                                        .row {
+                                            width: 100%;
+                                            height: 100%;
+                                            .title {
+                                                span {
+                                                    color: #fff;
+                                                }
+                                                p {
+                                                    margin-top: .5rem;
+                                                    margin-bottom: 0;
+                                                    color: #fff;
+                                                }
+                                            }
+                                            .value {
+                                                span {
+                                                    color: #fff;
+                                                }
+                                                p {
+                                                    display: none;
+                                                }
+                                            }
+                                            .btn-container {
+                                                position: absolute;
+                                                top: -140px;
+                                                right: 15px;
+                                                margin-top: 0;
+                                                background: none;
+                                                box-shadow: 0 0;
+                                                .favorite-btn {
+                                                    font-size: 0;
+                                                    padding: 0;
+                                                    i {
+                                                        &.favorite-ico {
+                                                            &:before {
+                                                                font-size: 2.5rem;
+                                                                margin: 0;
+                                                                text-shadow: -1px 2px 3px #000;
+                                                            }
+                                                        }
+                                                    }
+                                                }
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                        .seven {
+                            display: none;
+                            margin-left: 0;
+                        }
+                    }
+                }
+            }
+            .twelve.columns {
+                .five {
+                    float: left;
+                    width: 355px;
+                    .description {
+                        figure {
+                            img {
+                                display: none;
+                            }
+                            figcaption {
+                                .row {
+                                    .title {
+                                        span {
+                                            font-size: 1.8rem;
+                                            font-weight: 700;
+                                            line-height: 2.4rem;
+                                            display: block;
+                                            margin-top: 1.0rem;
+                                            color: #626262;
+                                        }
+                                        p {
+                                            font-size: 1.4rem;
+                                            line-height: 2.4rem;
+                                            margin-bottom: 3.0rem;
+                                            color: #626262;
+                                        }
+                                    }
+                                    .value {
+                                        span {
+                                            font-size: 2.0rem;
+                                            line-height: 2.4rem;
+                                            color: #626262;
+                                        }
+                                        p {
+                                            font-size: 1.4rem;
+                                            line-height: 2.4rem;
+                                            color: #626262;
+                                        }
+                                    }
+                                    .btn-container {
+                                        display: inline-block;
+                                        margin-top: 17px;
+                                        transition: all .2s ease-in-out;
+                                        border-radius: 5px;
+                                        background: #32bcd0;
+                                        box-shadow: 0 3px #28a1b3;
+                                        &:active {
+                                            margin-top: 23px;
+                                            box-shadow: 0 0;
+                                        }
+                                        a {
+                                            font-size: 1.2rem;
+                                            font-weight: 700;
+                                            display: block;
+                                            padding: 10px 20px 10px 5px;
+                                            text-decoration: none;
+                                            text-transform: uppercase;
+                                            color: #fff;
+                                            &.favorite-btn {
+                                                i {
+                                                    &.favorite-ico {
+                                                        &:before {
+                                                            font-family: 'icons';
+                                                            font-size: 2.0rem;
+                                                            font-weight: normal;
+                                                            margin-right: 5px;
+                                                            content: '\e60c';
+                                                            vertical-align: sub;
+                                                        }
+                                                    }
+                                                }
+                                                &.favorited {
+                                                    i {
+                                                        &.favorite-ico {
+                                                            &:before {
+                                                                content: '\e60b';
+                                                            }
+                                                        }
+                                                    }
+                                                }
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+                .seven {
+                    width: 520px;
+                    margin-left: 20px;
+                    #carousel-container {
+                        position: relative;
+                        overflow: hidden;
+                        #next {
+                            font-size: 0;
+                            position: absolute;
+                            top: 50%;
+                            right: 0;
+                            transform: translateY(-50%);
+                            text-decoration: none;
+                            i {
+                                display: table;
+                                width: 26px;
+                                height: 40px;
+                                text-align: center;
+                                background: rgba(0, 0, 0, .5);
+                                &.next-ico {
+                                    &:before {
+                                        font-family: 'icons';
+                                        font-size: 30px;
+                                        display: table-cell;
+                                        content: '\e900';
+                                        vertical-align: middle;
+                                        color: #fff;
+                                    }
+                                }
+                            }
+                        }
+                        #prev {
+                            font-size: 0;
+                            position: absolute;
+                            top: 50%;
+                            left: 0;
+                            transform: translateY(-50%);
+                            text-decoration: none;
+                            i {
+                                display: table;
+                                width: 26px;
+                                height: 40px;
+                                text-align: center;
+                                background: rgba(0, 0, 0, .5);
+                                &.prev-ico {
+                                    &:before {
+                                        font-family: 'icons';
+                                        font-size: 30px;
+                                        display: table-cell;
+                                        content: '\e901';
+                                        vertical-align: middle;
+                                        color: #fff;
+                                    }
+                                }
+                            }
+                        }
+                        ul {
+                            li {
+                                display: inline-block;
+                                overflow: hidden;
+                                box-sizing: border-box;
+                                border: 1px solid #ddd;
+                                border-radius: 10px;
+                                &:first-child {
+                                    margin-right: 15px;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

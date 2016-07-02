@@ -1,0 +1,72 @@
+@media screen and (max-width: 480px) {
+    body {
+        header {
+            .mob-menu {
+                display: block;
+                ul {
+                    display: none;
+                }
+                .menu-btn {
+                    width: 25px;
+                    height: 3px;
+                    display: block;
+                    background: #FFF;
+                    top: 25px;
+                    left: 30px;
+                    position: absolute;
+                    z-index: 1;
+                    &:before {
+                        content: '';
+                        width: 25px;
+                        height: 3px;
+                        display: block;
+                        background: #FFF;
+                        bottom: -8px;
+                        position: absolute;
+                        transition: all .3s ease-in-out;
+                    }
+                    &:after {
+                        content: '';
+                        width: 25px;
+                        height: 3px;
+                        display: block;
+                        background: #FFF;
+                        top: -8px;
+                        position: absolute;
+                        transition: all .3s ease-in-out;
+                    }
+                }
+                &.active {
+                    .menu-btn {
+                        height: 0px;
+                        &:before {
+                            transform: rotate(45deg);
+                            top: 0;
+                        }
+                        &:after {
+                            transform: rotate(-45deg);
+                            top: 0;
+                        }
+                    }
+                    ul {
+                        display: block;
+                        text-align: center;
+                        li {
+                            background: #28a1b3;
+                            padding: 5px;
+                            border-bottom: 1px solid #008a9e;
+                            &:last-child {
+                                border: none;
+                            }
+                            a {
+                                color: #FFF;
+                                text-transform: uppercase;
+                                text-decoration: none;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,201 @@
+@media screen and (max-width: 768px) {
+    body {
+        font-family: $roboto;
+        font-size: 1.2rem;
+        background: #f5f3f3;
+        .container {
+            width: 95%;
+            .item {
+                .twelve.columns {
+                    .five {
+                        width: 33%;
+                    }
+                    .seven {
+                        width: 64%;
+                        #carousel-container {
+                            position: relative;
+                            overflow: hidden;
+                            #next {
+                                font-size: 0;
+                                position: absolute;
+                                top: 50%;
+                                right: 0;
+                                transform: translateY(-50%);
+                                text-decoration: none;
+                                i {
+                                    display: table;
+                                    width: 26px;
+                                    height: 40px;
+                                    text-align: center;
+                                    background: rgba(0, 0, 0, .5);
+                                    &.next-ico {
+                                        &:before {
+                                            font-family: 'icons';
+                                            font-size: 30px;
+                                            display: table-cell;
+                                            content: '\e900';
+                                            vertical-align: middle;
+                                            color: #fff;
+                                        }
+                                    }
+                                }
+                            }
+                            #prev {
+                                font-size: 0;
+                                position: absolute;
+                                top: 50%;
+                                left: 0;
+                                transform: translateY(-50%);
+                                text-decoration: none;
+                                i {
+                                    display: table;
+                                    width: 26px;
+                                    height: 40px;
+                                    text-align: center;
+                                    background: rgba(0, 0, 0, .5);
+                                    &.prev-ico {
+                                        &:before {
+                                            font-family: 'icons';
+                                            font-size: 30px;
+                                            display: table-cell;
+                                            content: '\e901';
+                                            vertical-align: middle;
+                                            color: #fff;
+                                        }
+                                    }
+                                }
+                            }
+                            ul {
+                                li {
+                                    display: inline-block;
+                                    overflow: hidden;
+                                    box-sizing: border-box;
+                                    border: 1px solid #ddd;
+                                    border-radius: 10px;
+                                    width: 210px;
+                                    &:first-child {
+                                        margin-right: 20px;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+                &.gallery {
+                	width: 48%;
+                	&:nth-child(odd) {
+                		margin-right: 4%;
+                	}
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 480px) {
+    body {
+        .container {
+            .tab-selector {
+                display: none;
+            }
+            .item {
+                padding: 20px;
+                border: 1px solid #ddd;
+                border-radius: 5px;
+                background: #fff;
+                transition: all .3s ease-in-out;
+                float: none;
+                overflow: hidden;
+                width: 300px;
+                height: 259px;
+                padding: 0;
+                margin: 25px auto;
+                display: block;
+                .row {
+                    width: 100%;
+                    height: 100%;
+                    .twelve.columns {
+                        position: relative;
+                        width: 100%;
+                        height: 100%;
+                        .five {
+                            width: 100%;
+                            height: 100%;
+                            .description {
+                                figure {
+                                    img {
+                                        position: absolute;
+                                        top: 0;
+                                        right: 0;
+                                        bottom: 0;
+                                        left: 0;
+                                        display: block;
+                                        width: 100%;
+                                        height: 100%;
+                                        margin: auto;
+                                    }
+                                    figcaption {
+                                        position: absolute;
+                                        bottom: 0;
+                                        box-sizing: border-box;
+                                        width: 100%;
+                                        padding: 0 20px 20px 20px;
+                                        background: -webkit-gradient(linear, left top, left bottom, color-stop(0, transparent), color-stop(1%, transparent), color-stop(23%, rgba(0, 0, 0, .3)), color-stop(58%, rgba(0, 0, 0, .5)), color-stop(100%, rgba(0, 0, 0, .7)));
+                                        background: -webkit-linear-gradient(top, transparent 0, transparent 1%, rgba(0, 0, 0, .3) 23%, rgba(0, 0, 0, .5) 58%, rgba(0, 0, 0, .7) 100%);
+                                        background: linear-gradient(to bottom, transparent 0, transparent 1%, rgba(0, 0, 0, .3) 23%, rgba(0, 0, 0, .5) 58%, rgba(0, 0, 0, .7) 100%);
+                                        .row {
+                                            width: 100%;
+                                            height: 100%;
+                                            .title {
+                                                span {
+                                                    color: #fff;
+                                                }
+                                                p {
+                                                    margin-top: .5rem;
+                                                    margin-bottom: 0;
+                                                    color: #fff;
+                                                }
+                                            }
+                                            .value {
+                                                span {
+                                                    color: #fff;
+                                                }
+                                                p {
+                                                    display: none;
+                                                }
+                                            }
+                                            .btn-container {
+                                                position: absolute;
+                                                top: -140px;
+                                                right: 15px;
+                                                margin-top: 0;
+                                                background: none;
+                                                box-shadow: 0 0;
+                                                .favorite-btn {
+                                                    font-size: 0;
+                                                    padding: 0;
+                                                    i {
+                                                        &.favorite-ico {
+                                                            &:before {
+                                                                font-size: 2.5rem;
+                                                                margin: 0;
+                                                            }
+                                                        }
+                                                    }
+                                                }
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                        .seven {
+                            display: none;
+                            margin-left: 0;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
