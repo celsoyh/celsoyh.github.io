@@ -1,45 +1,8 @@
-html, body {
-	height: 100%;
-}
-#row-1 {
-	height: 100%;
-	/*background: linear-gradient(to top, #EFEFEF 0%, white 60%);
-	transform-style: preserve-3d;
-	transform: perspective(800px);*/
-	background-image: url(../images/background-3.jpeg);
-	background-size: cover;
+html {
+  background-color: #3c4556;
 }
 
-#row-1 h1,
-#row-1 p,
-#row-1 p a {
-	color: #242424;
-}
-
-#row-1 p a {
-	text-decoration: underline;
-}
-
-#row-1 .social {
-	margin: 0 auto;
-	text-align: center;
-}
-
-#row-1 .social ul {
-	padding: 0;
-}
-
-#row-1 .social ul li {
-	display: inline-block;
-	font-size: 3em;
-	margin: 0 1%;
-}
-
-#row-1 .social ul li a {
-	color: #333;
-}
-
-#row-1 .social ul li a:hover,
-#row-1 .social ul li a:visited {
-	text-decoration: none;
+h1 {
+  font-family: 'Press Start 2P', cursive;
+  color: rgb(80, 250, 123);
 }
