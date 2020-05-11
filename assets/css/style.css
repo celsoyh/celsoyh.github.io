@@ -6,3 +6,20 @@ h1 {
   font-family: 'Press Start 2P', cursive;
   color: rgb(80, 250, 123);
 }
+
+nav ul li {
+  list-style: none;
+  font-family: 'Press Start 2P', cursive;
+  margin-bottom: 15px;
+}
+
+nav ul li:before {
+  content: '>';
+  margin-right: 5px;
+  color: #FFF;
+}
+
+nav ul li a {
+  color: #FFF;
+  text-decoration: none;
+}
