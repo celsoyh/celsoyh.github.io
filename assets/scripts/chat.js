@@ -49,7 +49,7 @@ function rntOnFormSubmit() {
       const companionFormComponent = document.getElementById('rnt_companionForm');
       companionFormComponent.classList.remove('active');
       companionFormComponent.classList.remove('overflow');
-    }, 1000);
+    }, 500);
 
     setTimeout(function() {
       window.fcWidget.open();
