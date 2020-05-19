@@ -41,9 +41,11 @@ function rntOnFormSubmit() {
       firstName: document.getElementById('rnt_companion_nome').value,
       phone: document.getElementById('rnt_companion_phone').value,
       cpf: document.getElementById('rnt_companion_cpf').value
-    });
-
-    
+    }).then(function() {
+      setTimeout(function() {
+        window.fcWidget.open();
+      }, 1500)
+    })
 
     setTimeout(function () {
       const companionFormComponent = document.getElementById('rnt_companionForm');
@@ -51,9 +53,7 @@ function rntOnFormSubmit() {
       companionFormComponent.classList.remove('overflow');
     }, 500);
 
-    setTimeout(function() {
-      window.fcWidget.open();
-    }, 1500)
+    
   })
 
   formElement.addEventListener('submit', function (e) {
