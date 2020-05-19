@@ -47,6 +47,7 @@ function rntOnFormSubmit() {
       });
 
       window.fcWidget.user.setProperties({
+        firstName: document.getElementById('rnt_companion_nome').value,
         cpf: document.getElementById('rnt_companion_cpf').value,
         modelOfInterest: document.getElementById('rnt_companion_vehicle').value
       });
