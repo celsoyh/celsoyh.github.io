@@ -49,9 +49,8 @@ function rntOnFormSubmit() {
       });
 
       window.fcWidget.user.setProperties({
-        meta: {
-          cpf: document.getElementById('rnt_companion_cpf').value,
-        }
+          "cpf": document.getElementById('rnt_companion_cpf').value,
+        
       }).then(function() {
         setTimeout(function () {
           const companionFormComponent = document.getElementById('rnt_companionForm');
