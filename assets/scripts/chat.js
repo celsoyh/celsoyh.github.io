@@ -50,10 +50,10 @@ function rntOnFormSubmit() {
 
 
       window.fcWidget.on('user:created', function(resp) {
-        var status = resp && resp.status,
+        var status = resp && resp.status;
         if (status === 200) {
           window.fcWidget.user.setProperties({
-            "cpf": document.getElementById('rnt_companion_cpf').value,
+            cpf: document.getElementById('rnt_companion_cpf').value,
           
         }).then(function() {
           setTimeout(function () {
@@ -67,10 +67,7 @@ function rntOnFormSubmit() {
           }, 1500);
         })
         }
-      });
-     
-
-      
+      });    
     }
     function initialize(i,t){var e;i.getElementById(t)?initFreshChat():((e=i.createElement("script")).id=t,e.async=!0,e.src="https://wchat.freshchat.com/js/widget.js",e.onload=initFreshChat,i.head.appendChild(e))}function initiateCall(){initialize(document,"freshchat-js-sdk")}window.addEventListener?initiateCall():initiateCall();
 
