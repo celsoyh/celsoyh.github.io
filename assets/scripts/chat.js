@@ -45,9 +45,12 @@ function rntOnFormSubmit() {
 
       window.fcWidget.user.setProperties({
         firstName: document.getElementById('rnt_companion_nome').value,
+        lastName: '',
         phone: document.getElementById('rnt_companion_phone').value,
-        cpf: document.getElementById('rnt_companion_cpf').value,
-        email: "teste@gmail.com"
+        email: "teste@gmail.com",
+        meta: {
+          cpf: document.getElementById('rnt_companion_cpf').value,
+        }
       }).then(function(success) {
         console.log(success)
         setTimeout(function () {
