@@ -47,7 +47,7 @@ function rntOnFormSubmit() {
         firstName: document.getElementById('rnt_companion_nome').value,
         phone: document.getElementById('rnt_companion_phone').value,
         cpf: document.getElementById('rnt_companion_cpf').value,
-        email: window.fcWidget.user.setEmail("teste@gmail.com")
+        email: "teste@gmail.com"
       }).then(function() {
         setTimeout(function () {
           const companionFormComponent = document.getElementById('rnt_companionForm');
