@@ -41,12 +41,25 @@ function rntOnFormSubmit() {
       window.fcWidget.init({
         token: "8774d419-0104-43af-93cd-fbf3130ab5a6",
         host: "https://wchat.freshchat.com",
-        firstName: document.getElementById('rnt_companion_nome').value,
-        name: document.getElementById('rnt_companion_nome').value,
-        lastName: 'Nenhum',
-        phone: document.getElementById('rnt_companion_phone').value,
-        email: "teste@gmail.com",
-        cpf: document.getElementById('rnt_companion_cpf').value,
+        // firstName: document.getElementById('rnt_companion_nome').value,
+        // name: document.getElementById('rnt_companion_nome').value,
+        // lastName: 'Nenhum',
+        // phone: document.getElementById('rnt_companion_phone').value,
+        // email: "teste@gmail.com",
+        // cpf: document.getElementById('rnt_companion_cpf').value,
+        // modelOfInterest: document.getElementById('rnt_companion_vehicle').value
+      });
+
+      // To set user name
+      window.fcWidget.user.setFirstName(document.getElementById('rnt_companion_nome').value);
+      window.fcWidget.user.setPhone(document.getElementById('rnt_companion_phone').value);
+
+      // To set user email
+      window.fcWidget.user.setEmail("john.doe@gmail.com");
+
+      // To set user properties
+      window.fcWidget.user.setProperties({
+        cpf: document.getElementById('rnt_companion_cpf').value,  
         modelOfInterest: document.getElementById('rnt_companion_vehicle').value
       });
     }
