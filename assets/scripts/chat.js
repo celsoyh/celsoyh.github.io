@@ -48,7 +48,8 @@ function rntOnFormSubmit() {
         phone: document.getElementById('rnt_companion_phone').value,
         cpf: document.getElementById('rnt_companion_cpf').value,
         email: "teste@gmail.com"
-      }).then(function() {
+      }).then(function(success) {
+        console.log(success)
         setTimeout(function () {
           const companionFormComponent = document.getElementById('rnt_companionForm');
           companionFormComponent.classList.remove('active');
