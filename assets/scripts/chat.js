@@ -45,7 +45,6 @@ function rntOnFormSubmit() {
 
       window.fcWidget.user.setProperties({
         firstName: document.getElementById('rnt_companion_nome').value,
-        lastName: '',
         phone: document.getElementById('rnt_companion_phone').value,
         email: "teste@gmail.com",
         meta: {
