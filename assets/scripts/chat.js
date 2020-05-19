@@ -34,6 +34,38 @@ function rntOnFormSubmit() {
   const submitBtn = document.getElementById('rnt_companionForm-send');
   const submitBtnWPP = document.getElementById('rnt_companionForm-wpp');
 
+  submitBtnWPP.addEventListener('click', function(e) {
+    e.preventDefault();
+       
+    function initFreshChat() {
+      window.fcWidget.init({
+        token: "8774d419-0104-43af-93cd-fbf3130ab5a6",
+        host: "https://wchat.freshchat.com",
+        firstName: document.getElementById('rnt_companion_nome').value,
+        name: document.getElementById('rnt_companion_nome').value,
+        lastName: 'Nenhum',
+        phone: document.getElementById('rnt_companion_phone').value,
+        email: "teste@gmail.com",
+        cpf: document.getElementById('rnt_companion_cpf').value,
+        modelOfInterest: document.getElementById('rnt_companion_vehicle').value
+      });
+    }
+    
+    (function(d, id) {
+        var fcJS;
+        if (d.getElementById(id)) {
+            initFreshChat();
+            return;
+        }
+        fcJS = d.createElement('script');
+        fcJS.id = id;
+        fcJS.async = true;
+        fcJS.src = 'https://wchat.freshchat.com/js/widget.js';
+        fcJS.onload = initFreshChat;
+        d.head.appendChild(fcJS);
+    }(document, 'freshchat-js-sdk'));
+  })
+
   formElement.addEventListener('submit', function (e) {
     e.preventDefault();
     submitBtn.setAttribute('disabled', true);
