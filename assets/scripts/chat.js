@@ -42,10 +42,8 @@ function rntOnFormSubmit() {
         token: "8774d419-0104-43af-93cd-fbf3130ab5a6",
         host: "https://wchat.freshchat.com",
         firstName: document.getElementById('rnt_companion_nome').value,
-        lastName: 'Nenhum',
         phone: document.getElementById('rnt_companion_phone').value,
         phoneCountryCode: "+55",
-        email: "teste@gmail.com"
       });
 
       window.fcWidget.user.setProperties({
