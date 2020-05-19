@@ -60,6 +60,8 @@ function rntOnFormSubmit() {
         }, 1500)
       })
     }
+
+    initFreshChat()
   })
 
   formElement.addEventListener('submit', function (e) {
