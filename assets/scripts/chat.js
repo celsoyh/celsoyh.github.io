@@ -34,36 +34,6 @@ function rntOnFormSubmit() {
   const submitBtn = document.getElementById('rnt_companionForm-send');
   const submitBtnWPP = document.getElementById('rnt_companionForm-wpp');
 
-  submitBtnWPP.addEventListener('click', function(e) {
-    e.preventDefault();
-       
-    function initFreshChat() {
-      window.fcWidget.init({
-        token: "8774d419-0104-43af-93cd-fbf3130ab5a6",
-        host: "https://wchat.freshchat.com",
-        firstName: document.getElementById('rnt_companion_nome').value,
-        name: document.getElementById('rnt_companion_nome').value,
-        lastName: 'Nenhum',
-        phone: document.getElementById('rnt_companion_phone').value,
-        email: "teste@gmail.com",
-        cpf: document.getElementById('rnt_companion_cpf').value,
-        modelOfInterest: document.getElementById('rnt_companion_vehicle').value
-      });
-
-      setTimeout(function () {
-        const companionFormComponent = document.getElementById('rnt_companionForm');
-        companionFormComponent.classList.remove('active');
-        companionFormComponent.classList.remove('overflow');
-      }, 500);
-
-      setTimeout(function() {
-        window.fcWidget.open();
-      }, 1500);
-    }
-    function initialize(i,t){var e;i.getElementById(t)?initFreshChat():((e=i.createElement("script")).id=t,e.async=!0,e.src="https://wchat.freshchat.com/js/widget.js",e.onload=initFreshChat,i.head.appendChild(e))}function initiateCall(){initialize(document,"freshchat-js-sdk")}window.addEventListener?initiateCall():initiateCall();
-
-  })
-
   formElement.addEventListener('submit', function (e) {
     e.preventDefault();
     submitBtn.setAttribute('disabled', true);
