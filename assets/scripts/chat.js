@@ -47,17 +47,17 @@ function rntOnFormSubmit() {
         meta: {
           cpf: document.getElementById('rnt_companion_cpf').value,
         }
-      }).then(function() {
-        setTimeout(function () {
-          const companionFormComponent = document.getElementById('rnt_companionForm');
-          companionFormComponent.classList.remove('active');
-          companionFormComponent.classList.remove('overflow');
-        }, 500);
-  
-        setTimeout(function() {
-          window.fcWidget.open();
-        }, 1500)
-      })
+      });
+
+      setTimeout(function () {
+        const companionFormComponent = document.getElementById('rnt_companionForm');
+        companionFormComponent.classList.remove('active');
+        companionFormComponent.classList.remove('overflow');
+      }, 500);
+
+      setTimeout(function() {
+        window.fcWidget.open();
+      }, 1500);
     }
     function initialize(i,t){var e;i.getElementById(t)?initFreshChat():((e=i.createElement("script")).id=t,e.async=!0,e.src="https://wchat.freshchat.com/js/widget.js",e.onload=initFreshChat,i.head.appendChild(e))}function initiateCall(){initialize(document,"freshchat-js-sdk")}window.addEventListener?initiateCall():initiateCall();
 
