@@ -42,11 +42,10 @@ function rntOnFormSubmit() {
         token: "8774d419-0104-43af-93cd-fbf3130ab5a6",
         host: "https://wchat.freshchat.com",
         firstName: document.getElementById('rnt_companion_nome').value,
+        lastName: 'Nenhum',
         phone: document.getElementById('rnt_companion_phone').value,
         email: "teste@gmail.com",
-        meta: {
-          cpf: document.getElementById('rnt_companion_cpf').value,
-        }
+        cpf: document.getElementById('rnt_companion_cpf').value,
       });
 
       setTimeout(function () {
