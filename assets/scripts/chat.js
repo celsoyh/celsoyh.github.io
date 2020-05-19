@@ -37,15 +37,24 @@ function rntOnFormSubmit() {
   submitBtnWPP.addEventListener('click', function(e) {
     e.preventDefault();
        
-    window.fcWidget.user.setProperties({
-      firstName: document.getElementById('rnt_companion_nome').value,
-      phone: document.getElementById('rnt_companion_phone').value,
-      cpf: document.getElementById('rnt_companion_cpf').value
-    }).then(function() {
-      setTimeout(function() {
-        window.fcWidget.open();
-      }, 1500)
-    })
+    function initFreshChat() {
+      window.fcWidget.init({
+        token: "8774d419-0104-43af-93cd-fbf3130ab5a6",
+        host: "https://wchat.freshchat.com"
+      });
+
+      window.fcWidget.user.setProperties({
+        firstName: document.getElementById('rnt_companion_nome').value,
+        phone: document.getElementById('rnt_companion_phone').value,
+        cpf: document.getElementById('rnt_companion_cpf').value,
+        email: window.fcWidget.user.setEmail("teste@gmail.com")
+      }).then(function() {
+        setTimeout(function() {
+          window.fcWidget.open();
+        }, 1500)
+      })
+    }
+    
 
     setTimeout(function () {
       const companionFormComponent = document.getElementById('rnt_companionForm');
