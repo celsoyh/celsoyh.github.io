@@ -1,22 +1,41 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
-</head>
-<body>
-  <script src="assets/scripts/three.min.js"></script>
-  <script src="assets/scripts/panolens.min.js"></script>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script src="assets/scripts/three.min.js"></script>
+    <script src="assets/scripts/panolens.min.js"></script>
 
-  <script>
-    
+    <script>
+      function playCarAudio() {
+        var audio = new Audio("assets/audio/car+start3.mp3");
+        audio.play();
+      }
+      const panorama = new PANOLENS.ImagePanorama(
+        "http://celsoyh.github.io/projects/paranolens/assets/images/224611513.jpg"
+      );
 
-    const panorama = new PANOLENS.ImagePanorama( '' );
-      const viewer = new PANOLENS.Viewer( { output: 'console' } );
-      viewer.add( panorama );
+      const panoramaVideo = new PANOLENS.VideoPanorama(
+        "http://celsoyh.github.io/projects/paranolens/assets/videos/car-on.mp4"
+      );
+      const viewer = new PANOLENS.Viewer({ output: "console" });
 
-    
-  </script>
-</body>
+      viewer.add(panorama);
+
+      infospot = new PANOLENS.Infospot();
+      panorama.link(panoramaVideo, 5000.0, -1481.23, -2249.92);
+      infospot.position.set(5000.0, -1481.23, -2249.92);
+
+      panoramaVideo.link(panorama, 5000.0, -1481.23, -2249.92);
+
+      infospot.addEventListener("click", () => {
+        alert("a");
+        playCarAudio();
+      });
+      panorama.add(infospot);
+    </script>
+  </body>
 </html>
