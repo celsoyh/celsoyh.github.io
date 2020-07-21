@@ -48,6 +48,10 @@
         "http://celsoyh.github.io/projects/paranolens/assets/images/icon.png"
       );
 
+      panorama.onEnter(() => {
+        PANOLENS.playVideo();
+      });
+
       panoramaVideo.link(
         panorama,
         new THREE.Vector3(5000.0, -1481.23, -2249.92),
