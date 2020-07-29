@@ -31,18 +31,16 @@
         "http://celsoyh.github.io/projects/paranolens/assets/images/224611513.jpg"
       );
 
-
       const panoramaVideo = new PANOLENS.VideoPanorama(
         "http://celsoyh.github.io/projects/paranolens/assets/videos/car-on.mp4",
-        {autoplay: true},
-        300
+        { autoplay: true, muted: true, loop: false }
       );
 
       const viewer = new PANOLENS.Viewer({ output: "console" });
 
       viewer.add(panorama, panoramaVideo);
 
-      viewer.getCamera().position.set(4122.59, 2531.01, -1239.52)
+      viewer.getCamera().position.set(4122.59, 2531.01, -1239.52);
 
       panorama.link(
         panoramaVideo,
@@ -56,8 +54,6 @@
         new THREE.Vector3(4099.18, -406.48, 2824.29),
         300
       );
-
-
     </script>
   </body>
 </html>
