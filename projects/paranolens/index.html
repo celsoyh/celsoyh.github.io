@@ -28,7 +28,7 @@
       }
 
       const panorama = new PANOLENS.ImagePanorama(
-        "http://celsoyh.github.io/projects/paranolens/assets/images/224611513.jpg"
+        "http://celsoyh.github.io/projects/paranolens/assets/images/int.png"
       );
 
       const panoramaVideo = new PANOLENS.VideoPanorama(
@@ -55,7 +55,7 @@
         300
       );
 
-      panoramaVideo.addEventListener("enter", function () {
+      panoramaVideo.addEventListener("loaded", function () {
         alert("a");
         panoramaVideo.playVideo();
       });
