@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+
+    <style>
+      html,
+      body {
+        width: 100%;
+        height: 100%;
+        overflow: hidden;
+      }
+
+      body {
+        max-width: 720px;
+        max-height: 480px;
+        margin: auto;
+        position: absolute;
+        top: 0;
+        right: 0;
+        left: 0;
+        bottom: 0;
+      }
+    </style>
+  </head>
+  <body>
+    <script src="assets/scripts/three.min.js"></script>
+    <script src="assets/scripts/panolens.min.js"></script>
+
+    <script>
+      function playCarAudio() {
+        var audio = new Audio(
+          "http://celsoyh.github.io/projects/paranolens/assets/audio/car+start3.mp3"
+        );
+        audio.play();
+      }
+
+      const panorama = new PANOLENS.ImagePanorama(
+        "http://celsoyh.github.io/projects/paranolens/assets/images/360-infinity.jpg"
+      );
+
+      const panoramaVideo = new PANOLENS.VideoPanorama(
+        "http://celsoyh.github.io/projects/paranolens/assets/videos/car-on.mp4",
+        { autoplay: true, playsinline: true, muted: true },
+        300
+      );
+
+      const viewer = new PANOLENS.Viewer({ output: "console" });
+
+      viewer.add(panorama, panoramaVideo);
+      viewer.getCamera().position.set(68.46, 39.17, -4994.87);
+
+      panorama.link(
+        panoramaVideo,
+        new THREE.Vector3(-966.68, -1600.11, 4634.33),
+        300,
+        "http://celsoyh.github.io/projects/paranolens/assets/images/icon.png"
+      );
+
+      panoramaVideo.link(
+        panorama,
+        new THREE.Vector3(4099.18, -406.48, 2824.29),
+        300
+      );
+
+      panoramaVideo.addEventListener("load", function () {
+        console.log('a')
+        panoramaVideo.playVideo();
+        viewer.getCamera().position.set(4168.70, -467.54, 2706.66);
+      });
+    </script>
+  </body>
+</html>
