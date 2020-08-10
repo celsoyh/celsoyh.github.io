@@ -14,8 +14,8 @@
       }
 
       body {
-        max-width: 720px;
-        max-height: 480px;
+        max-width: 1024px;
+        max-height: 768px;
         margin: auto;
         position: absolute;
         top: 0;
@@ -23,52 +23,82 @@
         left: 0;
         bottom: 0;
       }
+
+      #carVideo {
+        visibility: hidden;
+        opacity: 0;
+        position: absolute;
+        transition: all 0.3s ease-in-out;
+      }
+
+      #carVideo.visible {
+        opacity: 1;
+        visibility: visible;
+        z-index: 1;
+      }
     </style>
   </head>
   <body>
+    <div id="carVideo"></div>
+
     <script src="assets/scripts/three.min.js"></script>
     <script src="assets/scripts/panolens.min.js"></script>
 
     <script>
-      function playCarAudio() {
-        var audio = new Audio(
-          "http://celsoyh.github.io/projects/paranolens/assets/audio/car+start3.mp3"
-        );
-        audio.play();
-      }
+      const tag = document.createElement("script");
+      tag.src = "https://www.youtube.com/player_api";
+      const firstScriptTag = document.getElementsByTagName("script")[0];
+      firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
 
       const panorama = new PANOLENS.ImagePanorama(
         "http://celsoyh.github.io/projects/paranolens/assets/images/360-infinity.jpg"
       );
 
-      const panoramaVideo = new PANOLENS.VideoPanorama(
-        "http://celsoyh.github.io/projects/paranolens/assets/videos/car-on.mp4",
-        { autoplay: true, playsinline: true, muted: true },
-        300
-      );
-
       const viewer = new PANOLENS.Viewer({ output: "console" });
-
-      viewer.add(panorama, panoramaVideo);
-      viewer.getCamera().position.set(68.46, 39.17, -4994.87);
-
-      panorama.link(
-        panoramaVideo,
-        new THREE.Vector3(-966.68, -1600.11, 4634.33),
-        300,
+      const infospot = new PANOLENS.Infospot(
+        500,
         "http://celsoyh.github.io/projects/paranolens/assets/images/icon.png"
       );
+      infospot.position.set(4699.98, -1539.7, 691.43);
+      infospot.addHoverText("Clique para girar a chave");
 
-      panoramaVideo.link(
-        panorama,
-        new THREE.Vector3(4099.18, -406.48, 2824.29),
-        300
-      );
+      panorama.add(infospot);
 
-      panoramaVideo.addEventListener("load", function () {
-        console.log('a')
-        panoramaVideo.playVideo();
-        viewer.getCamera().position.set(4168.70, -467.54, 2706.66);
+      viewer.add(panorama);
+      viewer.getCamera().position.set(4951.81, 510.0, -359.51);
+
+      const getState = (e) => {
+        const playerStatus = e.data;
+        const playerElement = e.target.f;
+        const ENDED = 0;
+
+        if (playerStatus === ENDED) {
+          if (window.confirm("O video acabou!")) {
+            playerElement.classList.remove("visible");
+            viewer.getCamera().position.set(4951.81, 510.0, -359.51);
+          } else {
+            playerElement.classList.remove("visible");
+          }
+        }
+      };
+
+      infospot.addEventListener("click", () => {
+        carVideo.classList.add("visible");
+
+        let player;
+        const onYouTubePlayerAPIReady = () => {
+          player = new YT.Player("carVideo", {
+            height: "768",
+            width: "1024",
+            videoId: "72bF3YmawBE",
+            playerVars: { autoplay: 1, controls: 1 },
+            events: {
+              onStateChange: getState,
+            },
+          });
+        };
+
+        onYouTubePlayerAPIReady();
       });
     </script>
   </body>
