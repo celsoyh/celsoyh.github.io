@@ -79,6 +79,8 @@
           } else {
             playerElement.classList.remove("visible");
           }
+
+          panorama.remove(infospot);
         }
       };
 
@@ -97,7 +99,7 @@
             height: "100%",
             width: "100%",
             videoId: "72bF3YmawBE",
-            playerVars: { autoplay: 1, controls: 0 },
+            playerVars: { autoplay: 1, controls: 0, playsinline: 1 },
             events: {
               onStateChange: getState,
               onReady: forceStartVideo,
