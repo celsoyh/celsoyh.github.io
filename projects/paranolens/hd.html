@@ -82,18 +82,25 @@
         }
       };
 
+      const forceStartVideo = (e) => {
+        const player = e.target;
+
+        player.playVideo();
+      };
+
       infospot.addEventListener("click", () => {
         carVideo.classList.add("visible");
 
         let player;
         const onYouTubePlayerAPIReady = () => {
           player = new YT.Player("carVideo", {
-            height: "768",
-            width: "1024",
+            height: "100%",
+            width: "100%",
             videoId: "72bF3YmawBE",
-            playerVars: { autoplay: 1, controls: 1 },
+            playerVars: { autoplay: 1, controls: 0 },
             events: {
               onStateChange: getState,
+              onReady: forceStartVideo,
             },
           });
         };
