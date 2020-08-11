@@ -51,13 +51,13 @@
       firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
 
       const panorama = new PANOLENS.ImagePanorama(
-        "http://celsoyh.github.io/projects/paranolens/assets/images/360-infinity.jpg"
+        "//celsoyh.github.io/projects/paranolens/assets/images/360-infinity.jpg"
       );
 
       const viewer = new PANOLENS.Viewer({ output: "console" });
       const infospot = new PANOLENS.Infospot(
         500,
-        "http://celsoyh.github.io/projects/paranolens/assets/images/icon.png"
+        "//celsoyh.github.io/projects/paranolens/assets/images/icon.png"
       );
       infospot.position.set(4699.98, -1539.7, 691.43);
       infospot.addHoverText("Clique para girar a chave");
