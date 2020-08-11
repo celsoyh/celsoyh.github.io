@@ -90,8 +90,14 @@
         player.playVideo();
       };
 
+      const vibrateMobile = (milisseconds) => {
+        window.navigator.vibrate(milisseconds);
+      };
+
       infospot.addEventListener("click", () => {
         carVideo.classList.add("visible");
+
+        vibrateMobile(300);
 
         let player;
         const onYouTubePlayerAPIReady = () => {
