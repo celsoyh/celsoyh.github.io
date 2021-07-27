@@ -26,9 +26,14 @@
   src: url(https://static.manypets.com/us/document/fonts/Inter/Inter-Bold.woff)
     format("woff");
 }
+
 html,
 body {
   font-family: "Inter", sans-serif;
+}
+
+#write {
+  max-width: 1000px;
 }
 
 #write h1,
