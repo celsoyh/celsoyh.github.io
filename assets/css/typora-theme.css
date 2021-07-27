@@ -1,1227 +1,565 @@
 @font-face {
-    font-family: 'EuclidFlex';
-    font-style: normal;
-    font-weight: 400;
-    src: url(https://static.manypets.com/us/document/fonts/EuclidFlex/EuclidFlex-Regular.woff) format('woff');
+  font-family: "EuclidFlex";
+  font-style: normal;
+  font-weight: 400;
+  src: url(https://static.manypets.com/us/document/fonts/EuclidFlex/EuclidFlex-Regular.woff)
+    format("woff");
 }
 @font-face {
-    font-family: 'EuclidFlex Bold';
-    font-style: normal;
-    font-weight: 700;
-    src: url(https://static.manypets.com/us/document/fonts/EuclidFlex/EuclidFlex-Bold.woff) format('woff');
+  font-family: "EuclidFlex Bold";
+  font-style: normal;
+  font-weight: 700;
+  src: url(https://static.manypets.com/us/document/fonts/EuclidFlex/EuclidFlex-Bold.woff)
+    format("woff");
 }
 @font-face {
-    font-family: 'Inter';
-    font-style: normal;
-    font-weight: 400;
-    src: url(https://static.manypets.com/us/document/fonts/Inter/Inter-Regular.woff) format('woff');
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 400;
+  src: url(https://static.manypets.com/us/document/fonts/Inter/Inter-Regular.woff)
+    format("woff");
 }
 @font-face {
-    font-family: 'Inter Bold';
-    font-style: normal;
-    font-weight: 700;
-    src: url(https://static.manypets.com/us/document/fonts/Inter/Inter-Bold.woff) format('woff');
+  font-family: "Inter Bold";
+  font-style: normal;
+  font-weight: 700;
+  src: url(https://static.manypets.com/us/document/fonts/Inter/Inter-Bold.woff)
+    format("woff");
 }
-
 html,
-body,
-#write{
-	background: #fcfcfc;
-	font-family: 'EuclidFlex', sans-serif;
-	font-weight: 400;
-}
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-	color: #44745E;
-	font-family: 'EuclidFlex', sans-serif;
-	font-weight: 400;
+body {
+  font-family: "Inter", sans-serif;
 }
 
-html {
-	font-size:16px;
+#write h1,
+#write h2,
+#write h3,
+#write h4,
+#write h5,
+#write h6 {
+  color: #44745e;
+  font-family: "EuclidFlex", sans-serif;
+  font-weight: 400;
 }
 
-#write {
-	max-width: 914px;
-	text-align: justify;
-}
-
-#write>h1:first-child {
-	margin-top: 2.75rem;
-}
-#write>h2:first-child {
-	margin-top: 1.75rem;
-}
-#write>h3:first-child {
-	margin-top: 1rem;
-}
-#write>h4:first-child {
-	margin-top: 0.5rem;
-}
-
-p {
-	color: #111;
-	font-size: 1rem;
-	line-height: 1.75rem;
-	margin: 0 0 1.25rem;
-}
-#write>h3.md-focus:before {
-	left: -1.875rem;
-	top: 0.5rem;
-	padding: 2px;
-}
-#write>h4.md-focus:before {
-	left: -1.875rem;
-	top: 0.3125rem;
-	padding: 2px;
-}
-#write>h5.md-focus:before {
-	left: -1.875rem;
-	top: 0.25rem;
-	padding: 2px;
-}
-#write>h6.md-focus:before {
-	left: -1.875rem;
-	top: .125rem;
-	padding: 2px;
-}
-/*@media screen and (min-width: 48em) {
-	.h1,
-	h1 {
-		font-size: 3.250rem;
-	}
-	.h2,
-	h2 {
-		font-size: 2.298rem;
-	}
-	.h3,
-	h3 {
-		font-size: 1.625rem;
-	}
-	.h4,
-	h4 {
-		font-size: 1.250rem;
-	}
-	.h5,
-	h5 {
-		font-size: 1.150rem;
-	}
-	.h6,
-	h6 {
-		font-size: 1rem;
-	}
-	#write>h4.md-focus:before,
-	#write>h5.md-focus:before,
-	#write>h6.md-focus:before {
-		top: 1px;
-	}
-	p {
-		font-size: 1.25rem;
-		line-height: 1.8;
-	}
-	table {
-		font-size: 1.25rem;
-	}
-}*/
-@media screen and (max-width: 48em) {
-	blockquote {
-		margin-left: 1rem;
-		margin-right: 0;
-		padding: 0.5em;
-	}
-	.h1,
-	h1 {
-		font-size: 2.827rem;
-	}
-	.h2,
-	h2 {
-		font-size: 1.999rem;
-	}
-	.h3,
-	h3 {
-		font-size: 1.413rem;
-	}
-	.h4,
-	h4 {
-		font-size: 1.250rem;
-	}
-	.h5,
-	h5 {
-		font-size: 1.150rem;
-	}
-	.h6,
-	h6 {
-		font-size: 1rem;
-	}
-}
-a,
-.md-def-url {
-	color: #990000;
-	text-decoration: none;
-}
-a:hover {
-	text-decoration: underline;
-}
-table {
-	margin-bottom: 20px
-}
-table th,
-table td {
-	padding: 8px;
-	line-height: 1.25rem;
-	vertical-align: top;
-	border-top: 1px solid #ddd
-}
-table th {
-	font-weight: bold
-}
-table thead th {
-	vertical-align: bottom
-}
-table caption+thead tr:first-child th,
-table caption+thead tr:first-child td,
-table colgroup+thead tr:first-child th,
-table colgroup+thead tr:first-child td,
-table thead:first-child tr:first-child th,
-table thead:first-child tr:first-child td {
-	border-top: 0
-}
-table tbody+tbody {
-	border-top: 2px solid #ddd
-}
-code, .md-fences {
-	padding: .5em;
-	/*background: #f0f0f0;*/
-	border: 1px solid #ccc;
-	padding: .1em;
-	font-size: 0.9em;
-	margin-left: 0.2em;
-	margin-right: 0.2em;
-}
-.md-fences {
-	margin: 0 0 20px;
-	font-size: 1em;
-	padding: 0.3em 1em;
-  	padding-top: 0.4em;
-}
-.task-list{
-	padding-left: 0;
-}
-
-.task-list-item {
-	padding-left:2.125rem;
-}
-
-.task-list-item input {
-	top: 3px;
-
-}
-
-.task-list-item input:before {
-	content: "";
-	display: inline-block;
-	width: 1rem;
-	height: 1rem;
-	vertical-align: middle;
-	text-align: center;
-	border: 1px solid gray;
-	background-color: #fdfdfd;
-	margin-left: 0;
-	margin-top: -0.5rem;
-}
-.task-list-item input:checked:before,
-.task-list-item input[checked]:before{
-	content: '\25FC';
-	/*◘*/
-	font-size: 0.8125rem;
-	line-height: 0.9375rem;
-	margin-top: -1rem;
-}
-
-/* Chrome 29+ */
-@media screen and (-webkit-min-device-pixel-ratio:0)
-  and (min-resolution:.001dpcm) {
-    .task-list-item input:before {
-    	margin-top: -0.2rem;
-    }
-
-    .task-list-item input:checked:before,
-	.task-list-item input[checked]:before {
-		margin-top: -0.2rem;
-	}
-}
-
-blockquote {
-	background: #f7f8f9;
-	margin: 0;
-	padding: 0;
-	padding: 24px 40px;
-	margin-bottom: 30px;
-	border-left: none;
-}
-
-blockquote,
-blockquote p {
-	line-height: 24px;
-	color: #323949;
-	font-size: 16px;
-	font-family: 'Inter';
-}
-
-blockquote b {
-	font-family: 'Inter Bold';
-	font-size: 16px;
-	line-height: 24px;
-	letter-spacing: 0px;
-}
-
-blockquote ul:last-child,
-blockquote li:last-child,
-blockquote p:last-child {
-	margin-bottom: 0;
-}
-
-#write pre.md-meta-block {
-	min-height: 30px;
-	background: #f8f8f8;
-	padding: 1.5em;
-	font-weight: 300;
-	font-size: 1em;
-	padding-bottom: 1.5em;
-	padding-top: 3em;
-    margin-top: -1.5em;
-	color: #999;
-	border-left: 1000px #f8f8f8 solid;
-	margin-left: -1000px;
-	border-right: 1000px #f8f8f8 solid;
-	margin-right: -1000px;
-	margin-bottom: 2em;
-}
-.MathJax_Display {
-	font-size: 0.9em;
-	margin-top: 0.5em;
-	margin-bottom: 0;
-}
-p.mathjax-block,
-.mathjax-block {
-	padding-bottom: 0;
-}
-.mathjax-block>.code-tooltip {
-	bottom: 5px;
-	box-shadow: none;
-}
-.md-image>.md-meta {
-	padding-left: 0.5em;
-	padding-right: 0.5em;
-}
-.md-image>img {
-	margin-top: 2px;
-}
-.md-image>.md-meta:first-of-type:before {
-	padding-left: 4px;
-}
-
-#typora-source {
-	color: #555;
-}
-
-/** ui for windows **/
-#md-searchpanel {
-    border-bottom: 1px solid #ccc;
-}
-
-#md-searchpanel .btn {
-    border: 1px solid #ccc;
-}
-
-#md-notification:before {
-	top: 14px;
-}
-
-#md-notification {
-	background: #eee;
-}
-
-.megamenu-menu-panel .btn {
-	border: 1px solid #ccc;
-}
-
-/* BBM Theme */
-
-@font-face {
-	font-family: 'EuclidFlex';
-	font-style: normal;
-	font-weight: 400;
-	src: url(https://static.manypets.com/us/document/fonts/EuclidFlex/EuclidFlex-Regular.woff) format('woff');
-}
-@font-face {
-	font-family: 'EuclidFlex Bold';
-	font-style: normal;
-	font-weight: 700;
-	src: url(https://static.manypets.com/us/document/fonts/EuclidFlex/EuclidFlex-Bold.woff) format('woff');
-}
-@font-face {
-	font-family: 'Inter';
-	font-style: normal;
-	font-weight: 400;
-	src: url(https://static.manypets.com/us/document/fonts/Inter/Inter-Regular.woff) format('woff');
-}
-@font-face {
-	font-family: 'Inter Bold';
-	font-style: normal;
-	font-weight: 700;
-	src: url(https://static.manypets.com/us/document/fonts/Inter/Inter-Bold.woff) format('woff');
-}
-@page {
-	size: letter portrait;
-	margin: 0;
-	margin-bottom: 40px;
-	padding: 0.5in 0.75in;
-	font-family: 'Inter', sans-serif;
-	font-size: 10px;
-	color: #5a6478;
-	counter-reset: page 1;
-	@top-left {
-		content: flow(header-html);
-   }
-	@top-right {
-		margin-top: 40pt;
-		margin-right: 50pt;
-   }
-	@bottom-left {
-		margin-left: 50pt;
-   }
-	@bottom-center {
-		content: counter(page);
-   }
-}
-:root {
-	--pet-name: "{
-	   {
-			policy.data.insured_entity.pet_name 
-	   }
-   }
-   ";
-}
-.wellness-cover-page {
-	page: wellness_cover_page;
-}
-.accident-illness-cover-page {
-	position: relative;
-	page: accident_illness_cover_page;
-}
-.accident-illness-cover-page-non-participating {
-	page: accident_illness_cover_page_non_participating;
-}
-.mpwell-not-insurance-page {
-	page: mpwell_not_insurance_page;
-}
-.mpsum-not-insurance-page {
-	page: mpsum_not_insurance_page;
-}
-.mppol-page {
-	page: mppol_page;
-}
-.mppol-page-pa {
-	page: mppol_page_pa;
-}
-.mpcng-page {
-	page: mpcng_page;
-}
-.mpcan-page {
-	page: mpcan_page;
-}
-.no-page-number {
-	page: no_page_number_page;
-}
-.mpcan-manypets-page {
-	page: mpcan_manypets_page;
-}
-.mpcan-manypets-page_pa {
-	page: mpcan_manypets_page_pa;
-}
-.mpnrn-manypets-page {
-	page: mpnrn_manypets_page;
-}
-.pet-name-insurance-policy-page {
-	page: pet_name_insurance_policy_page;
-}
-.pet-name-insurance-policy-page-pa {
-	page: pet_name_insurance_policy_page_pa;
-}
-.what-we-cover-page {
-	page: what_we_cover_page;
-}
-.what-we-cover-page-pa {
-	page: what_we_cover_page_pa;
-}
-.what-dont-we-cover-page {
-	page: what_dont_we_cover_page;
-}
-.what-dont-we-cover-page-pa {
-	page: what_dont_we_cover_page_pa;
-}
-.how-pet-name-policy-works-page {
-	page: how_pet_name_policy_works_page;
-}
-.how-pet-name-policy-works-page-pa {
-	page: how_pet_name_policy_works_page_pa;
-}
-.general-conditions-page {
-	page: general_conditions_page;
-}
-.general-conditions-page-pa {
-	page: general_conditions_page_pa;
-}
-.definitions-we-use-page {
-	page: definitions_we_use;
-}
-.definitions-we-use-page-pa {
-	page: definitions_we_use_pa;
-}
-.signature-endorsement-page {
-	page: signature_endorsement_page;
-}
-.signature-endorsement-page-pa {
-	page: signature_endorsement_page_pa;
-}
-.thanks-page {
-	page: thanks_page;
-}
-header {
-	flow: static(header-html);
-}
-/* define a few different page types we can refer to from CSS classes */
-@page accident_illness_cover_page {
-	background: url("https://static.manypets.com/us/document/images/cover/accident-illness.jpg") no-repeat center center fixed;
-	background-size: cover;
-	@top-left {
-		content: "";
-   }
-	@bottom-center {
-		content: "";
-   }
-}
-@page accident_illness_cover_page_non_participating {
-	background: url("https://static.manypets.com/us/document/images/cover/accident-illness-v2.jpg") no-repeat center center fixed;
-	background-size: cover;
-	@bottom-center {
-		content: "NON - PARTICIPATING";
-   }
-}
-@page wellness_cover_page {
-	background: url("https://static.manypets.com/us/document/images/cover/wellness.jpg") no-repeat center center fixed;
-	background-size: cover;
-	@top-left {
-		content: "";
-   }
-	@bottom-center {
-		content: "";
-   }
-}
-@page mpwell_not_insurance_page {
-	@bottom-left {
-		content: "MPWELL 02-2021";
-   }
-	@bottom-right {
-		content: "THIS IS NOT AN INSURANCE PRODUCT";
-   }
-}
-@page mpsum_not_insurance_page {
-	@bottom-left {
-		content: "MPSUM 02-2021";
-   }
-	@bottom-right {
-		content: "THIS IS NOT AN INSURANCE PRODUCT";
-   }
-}
-@page mppol_page {
-	@bottom-left {
-		content: "MPPOL 02-2021";
-   }
-}
-@page mppol_page_pa {
-	@bottom-left {
-		content: "MPPOLPA 02-2021";
-   }
-}
-@page mpcng_page {
-	@bottom-left {
-		content: "MPCNG 02-2021";
-   }
-}
-@page mpcan_page {
-	@bottom-left {
-		content: "MPCAN 02/2021";
-   }
-}
-@page no_page_number_page {
-	@bottom-center {
-		content: "";
-   }
-}
-@page mpcan_manypets_page {
-	@bottom-left {
-		content: "MPCAN 02-2021";
-   }
-	@bottom-center {
-		content: "MANYPETS.COM";
-   }
-}
-@page mpcan_manypets_page_pa {
-	@bottom-left {
-		content: "MPCANNRNPA 02-2021";
-   }
-	@bottom-center {
-		content: "MANYPETS.COM";
-   }
-}
-@page mpnrn_manypets_page {
-	@bottom-left {
-		content: "MPNRN 02-2021";
-   }
-	@bottom-center {
-		content: "MANYPETS.COM";
-   }
-}
-@page thanks_page {
-	background: #f3f5f2;
-	mix-blend-mode: normal;
-	@top-left {
-		content: "";
-   }
-	@bottom-center {
-		content: "";
-   }
-}
-@page pet_name_insurance_policy_page {
-	@top-right {
-		content: "Policy Form ‣ 1. " var(--pet-name) "'s Pet Insurance policy.";
-   }
-	@bottom-left {
-		content: "MPPOL 02-2021";
-   }
-}
-@page pet_name_insurance_policy_page_pa {
-	@top-right {
-		content: "Policy Form ‣ 1. " var(--pet-name) "'s Pet Insurance policy.";
-   }
-	@bottom-left {
-		content: "MPPOLPA 02-2021";
-   }
-}
-@page what_we_cover_page {
-	@top-right {
-		content: "Policy Form ‣ 2. What we cover.";
-   }
-	@bottom-left {
-		content: "MPPOL 02-2021";
-   }
-}
-@page what_we_cover_page_pa {
-	@top-right {
-		content: "Policy Form ‣ 2. What we cover.";
-   }
-	@bottom-left {
-		content: "MPPOLPA 02-2021";
-   }
-}
-@page what_dont_we_cover_page {
-	@top-right {
-		content: "Policy Form ‣ 3. What don't we cover?";
-   }
-	@bottom-left {
-		content: "MPPOL 02-2021";
-   }
-}
-@page what_dont_we_cover_page_pa {
-	@top-right {
-		content: "Policy Form ‣ 3. What don't we cover?";
-   }
-	@bottom-left {
-		content: "MPPOLPA 02-2021";
-   }
-}
-@page how_pet_name_policy_works_page {
-	@top-right {
-		content: "Policy Form ‣ 4. How " var(--pet-name) "'s Policy works.";
-   }
-	@bottom-left {
-		content: "MPPOL 02-2021";
-   }
-}
-@page how_pet_name_policy_works_page_pa {
-	@top-right {
-		content: "Policy Form ‣ 4. How " var(--pet-name) "'s Policy works.";
-   }
-	@bottom-left {
-		content: "MPPOLPA 02-2021";
-   }
-}
-@page general_conditions_page {
-	@top-right {
-		content: "Policy Form ‣ 5. General conditions.";
-   }
-	@bottom-left {
-		content: "MPPOL 02-2021";
-   }
-}
-@page general_conditions_page_pa {
-	@top-right {
-		content: "Policy Form ‣ 5. General conditions.";
-   }
-	@bottom-left {
-		content: "MPPOLPA 02-2021";
-   }
-}
-@page definitions_we_use {
-	@top-right {
-		content: "Policy Form ‣ 6. Definitions we use.";
-   }
-	@bottom-left {
-		content: "MPPOL 02-2021";
-   }
-}
-@page definitions_we_use_pa {
-	@top-right {
-		content: "Policy Form ‣ 6. Definitions we use.";
-   }
-	@bottom-left {
-		content: "MPPOLPA 02-2021";
-   }
-}
-@page signature_endorsement_page {
-	@top-right {
-		content: "Signature endorsement";
-   }
-	@bottom-left {
-		content: "MPSIG 02-2021";
-   }
-}
-@page signature_endorsement_page_pa {
-	@top-right {
-		content: "Signature endorsement";
-   }
-	@bottom-left {
-		content: "MPSIGPA 02-2021";
-   }
-}
-/* setup CSS classes to refer to these pages we just defined */
-html, body {
-	font-family: 'Inter', sans-serif;
-}
-p, li, tbody tr {
-	font-style: normal;
-	font-weight: normal;
-	font-size: convert(12, px, pt);
-	line-height: convert(18, px, pt);
-	margin: 0;
-	margin-bottom: 12px;
-}
-li {
-	margin-bottom: 16px;
-}
-p {
-	margin-bottom: 18px;
-}
-a:link, a:active, a:visited {
-	text-decoration: none;
-	color: #000;
-}
-.color-dark {
-	color: #294638 !important;
-}
-.chapter {
-	page-break-before: always;
-}
-.keep-together {
-	page-break-inside: avoid;
-}
-.lowercase {
-	text-transform: lowercase;
-}
-.info-page h3 {
-	font-family: 'EuclidFlex', sans-serif;
-	font-size: convert(24, px, pt);
-	line-height: convert(28, px, pt);
-	letter-spacing: 1px;
-	color: #294638;
-	margin: 0;
-	margin-bottom: 12px;
-}
-.info-page .highlight {
-	font-family: 'Inter', sans-serif;
-	font-weight: 500;
-	color: #44745e;
-	font-size: convert(18, px, pt);
-	line-height: convert(27, px, pt);
-}
-.info-page p {
-	color: #323949;
-}
-.info-page table td {
-	vertical-align: top;
-}
-.info-page table td:first-of-type {
-	width: 70%;
-	padding-right: 30px;
-}
-.contents-page-number {
-	display: inline-block;
-	position: absolute;
-	right: 0;
-	font-family: 'Inter', sans-serif;
-	font-style: normal;
-	font-size: 12px;
-	font-weight: 600;
-	line-height: 21px;
-	text-align: center;
-	letter-spacing: 1px;
+#write p,
+#write li,
+#write tbody tr {
+  font-style: normal;
+  font-weight: normal;
+  font-size: convert(12, px, pt);
+  line-height: convert(18, px, pt);
+  margin: 0;
+  margin-bottom: 12px;
+}
+#write li {
+  margin-bottom: 16px;
+}
+#write p {
+  margin-bottom: 18px;
+}
+#write a:link,
+#write a:active,
+#write a:visited {
+  text-decoration: none;
+  color: #000;
+}
+#write .color-dark {
+  color: #294638 !important;
+}
+#write .chapter {
+  page-break-before: always;
+}
+#write .keep-together {
+  page-break-inside: avoid;
+}
+#write .lowercase {
+  text-transform: lowercase;
+}
+#write .info-page h3 {
+  font-family: "EuclidFlex", sans-serif;
+  font-size: convert(24, px, pt);
+  line-height: convert(28, px, pt);
+  letter-spacing: 1px;
+  color: #294638;
+  margin: 0;
+  margin-bottom: 12px;
+}
+#write .info-page .highlight {
+  font-family: "Inter", sans-serif;
+  font-weight: 500;
+  color: #44745e;
+  font-size: convert(18, px, pt);
+  line-height: convert(27, px, pt);
+}
+#write .info-page p {
+  color: #323949;
+}
+#write .info-page table td {
+  vertical-align: top;
+}
+#write .info-page table td:first-of-type {
+  width: 70%;
+  padding-right: 30px;
+}
+#write .contents-page-number {
+  display: inline-block;
+  position: absolute;
+  right: 0;
+  font-family: "Inter", sans-serif;
+  font-style: normal;
+  font-size: 12px;
+  font-weight: 600;
+  line-height: 21px;
+  text-align: center;
+  letter-spacing: 1px;
 }
 /* List Styling */
-ul > li::before {
-	content: '•';
-	color: #ff9d94;
-	position: absolute;
-	left: -20px;
-}
-ul, ol {
-	list-style: none;
-	margin-bottom: 12px;
-}
-ul li, ol li {
-	position: relative;
-}
-ol {
-	counter-reset: defaultNumber;
-}
-ol > li {
-	counter-increment: defaultNumber;
-}
-ol > li::before {
-	content: counter(defaultNumber);
-	color: #ff9d94;
-	position: absolute;
-	left: -25px;
-}
-ol.list-numbers-alpha {
-	counter-increment: listNumber;
-}
-ol.list-numbers-alpha > li {
-	counter-increment: listNumbersAlpha;
-}
-ol.list-numbers-alpha > li::before {
-	content: counter(listNumber) counter(listNumbersAlpha,lower-alpha);
-	font-family: 'EuclidFlex', sans-serif;
-	color: #44745e;
-	position: absolute;
-	left: -40px;
-	font-size: 24px;
-	line-height: 28px;
-}
-ol.list-alpha {
-	counter-reset: listAlpha;
-}
-ol.list-alpha > li {
-	counter-increment: listAlpha;
-}
-ol.list-alpha > li::before {
-	content: counter(listAlpha,lower-alpha);
-	font-family: 'EuclidFlex', sans-serif;
-}
-ol.list-heading > li {
-	padding-left: 20px;
-}
-ol.list-heading > li::before {
-	font-family: 'EuclidFlex', sans-serif;
-	font-style: normal;
-	font-weight: normal;
-	font-size: 24pt;
-	line-height: 28.5pt;
-	letter-spacing: 1px;
-	color: #44745e;
-}
-ul.list-circles {
-	list-style-type: circle;
-	margin-top: 8px;
-}
-ul.list-circles > li {
-	counter-increment: none;
-}
-ul.list-circles > li::before {
-	content: '';
-}
-ol.list-no-style > li::before, ul.list-no-style > li::before {
-	content: "";
-}
-ol.list-no-style > li h3, ul.list-no-style > li h3 {
-	margin-left: -30px;
-}
-ol.contents-list {
-	position: relative;
-	font-family: 'Inter', sans-serif;
-	font-style: normal;
-	font-weight: 600;
-	letter-spacing: 1px;
-	color: #1e1e1e;
-	padding: 0;
-	padding-left: 39px;
-	margin: 0;
+#write ul > li::before {
+  content: "•";
+  color: #ff9d94;
+  position: absolute;
+  left: -20px;
+}
+#write ul,
+#write ol {
+  list-style: none;
+  margin-bottom: 12px;
+}
+#write ul li,
+#write ol li {
+  position: relative;
+}
+#write ol {
+  counter-reset: defaultNumber;
+}
+#write ol > li {
+  counter-increment: defaultNumber;
+}
+#write ol > li::before {
+  content: counter(defaultNumber);
+  color: #ff9d94;
+  position: absolute;
+  left: -25px;
+}
+#write ol.list-numbers-alpha {
+  counter-increment: listNumber;
+}
+#write ol.list-numbers-alpha > li {
+  counter-increment: listNumbersAlpha;
+}
+#write ol.list-numbers-alpha > li::before {
+  content: counter(listNumber) counter(listNumbersAlpha, lower-alpha);
+  font-family: "EuclidFlex", sans-serif;
+  color: #44745e;
+  position: absolute;
+  left: -40px;
+  font-size: 24px;
+  line-height: 28px;
+}
+#write ol.list-alpha {
+  counter-reset: listAlpha;
+}
+#write ol.list-alpha > li {
+  counter-increment: listAlpha;
+}
+#write ol.list-alpha > li::before {
+  content: counter(listAlpha, lower-alpha);
+  font-family: "EuclidFlex", sans-serif;
+}
+#write ol.list-heading > li {
+  padding-left: 20px;
+}
+#write ol.list-heading > li::before {
+  font-family: "EuclidFlex", sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 24pt;
+  line-height: 28.5pt;
+  letter-spacing: 1px;
+  color: #44745e;
+}
+#write ul.list-circles {
+  list-style-type: circle;
+  margin-top: 8px;
+}
+#write ul.list-circles > li {
+  counter-increment: none;
+}
+#write ul.list-circles > li::before {
+  content: "";
+}
+#write ol.list-no-style > li::before,
+#write ul.list-no-style > li::before {
+  content: "";
+}
+#write ol.list-no-style > li h3,
+#write ul.list-no-style > li h3 {
+  margin-left: -30px;
+}
+#write ol.contents-list {
+  position: relative;
+  font-family: "Inter", sans-serif;
+  font-style: normal;
+  font-weight: 600;
+  letter-spacing: 1px;
+  color: #1e1e1e;
+  padding: 0;
+  padding-left: 39px;
+  margin: 0;
+}
+#write ol.contents-list > li {
+  font-weight: bold;
+  margin-bottom: 12px;
 }
-ol.contents-list > li {
-	font-weight: bold;
-	margin-bottom: 12px;
+#write ol.contents-list > li::before {
+  content: counter(defaultNumber) ".";
+  color: #1e1e1e;
+  display: inline-block;
+  position: relative;
+  left: 0;
+  padding: 0;
+  padding-right: 34px;
+  width: 25px;
 }
-ol.contents-list > li::before {
-	content: counter(defaultNumber) ".";
-	color: #1e1e1e;
-	display: inline-block;
-	position: relative;
-	left: 0;
-	padding: 0;
-	padding-right: 34px;
-	width: 25px;
+#write ol.contents-list .list-alpha {
+  padding: 0;
+  margin: 0;
 }
-ol.contents-list .list-alpha {
-	padding: 0;
-	margin: 0;
+#write ol.contents-list .list-alpha > li::before {
+  color: #44745e;
+  position: relative;
+  display: inline-block;
+  padding-right: 34px;
+  width: 25px;
+  left: 0;
 }
-ol.contents-list .list-alpha > li::before {
-	color: #44745e;
-	position: relative;
-	display: inline-block;
-	padding-right: 34px;
-	width: 25px;
-	left: 0;
+#write ol.contents-list .list-alpha > li .contents-page-number {
+  font-weight: normal;
 }
-ol.contents-list .list-alpha > li .contents-page-number {
-	font-weight: normal;
+#write ol.remove-bottom-margin,
+#write ul.remove-bottom-margin {
+  margin-bottom: 0;
 }
-
-ol.remove-bottom-margin,
-ul.remove-bottom-margin {
- margin-bottom: 0;
+#write ol.remove-bottom-margin > li:last-of-type,
+#write ul.remove-bottom-margin > li:last-of-type {
+  margin-bottom: 0;
 }
-
-ul.remove-bottom-margin > li:last-of-type {
-	margin-bottom: 0;
+#write ol[start="1"] {
+  counter-reset: firstLevelList 0;
 }
-
-ol[start="1"] {
-	counter-reset: firstLevelList 0;
+#write ol ol[start="1"] {
+  counter-reset: secondLevelList 0;
 }
-ol ol[start="1"] {
-	counter-reset: secondLevelList 0;
+#write blockquote ol[start="1"] {
+  counter-reset: blockquoteList 0;
 }
-blockquote ol[start="1"] {
-	counter-reset: blockquoteList 0;
+#write ol[start="2"] {
+  counter-reset: firstLevelList 1;
 }
-ol[start="2"] {
-	counter-reset: firstLevelList 1;
+#write ol ol[start="2"] {
+  counter-reset: secondLevelList 1;
 }
-ol ol[start="2"] {
-	counter-reset: secondLevelList 1;
+#write blockquote ol[start="2"] {
+  counter-reset: blockquoteList 1;
 }
-blockquote ol[start="2"] {
-	counter-reset: blockquoteList 1;
+#write ol[start="3"] {
+  counter-reset: firstLevelList 2;
 }
-ol[start="3"] {
-	counter-reset: firstLevelList 2;
+#write ol ol[start="3"] {
+  counter-reset: secondLevelList 2;
 }
-ol ol[start="3"] {
-	counter-reset: secondLevelList 2;
+#write blockquote ol[start="3"] {
+  counter-reset: blockquoteList 2;
 }
-blockquote ol[start="3"] {
-	counter-reset: blockquoteList 2;
+#write ol[start="4"] {
+  counter-reset: firstLevelList 3;
 }
-ol[start="4"] {
-	counter-reset: firstLevelList 3;
+#write ol ol[start="4"] {
+  counter-reset: secondLevelList 3;
 }
-ol ol[start="4"] {
-	counter-reset: secondLevelList 3;
+#write blockquote ol[start="4"] {
+  counter-reset: blockquoteList 3;
 }
-blockquote ol[start="4"] {
-	counter-reset: blockquoteList 3;
+#write ol[start="5"] {
+  counter-reset: firstLevelList 4;
 }
-ol[start="5"] {
-	counter-reset: firstLevelList 4;
+#write ol ol[start="5"] {
+  counter-reset: secondLevelList 4;
 }
-ol ol[start="5"] {
-	counter-reset: secondLevelList 4;
+#write blockquote ol[start="5"] {
+  counter-reset: blockquoteList 4;
 }
-blockquote ol[start="5"] {
-	counter-reset: blockquoteList 4;
+#write ol[start="6"] {
+  counter-reset: firstLevelList 5;
 }
-ol[start="6"] {
-	counter-reset: firstLevelList 5;
+#write ol ol[start="6"] {
+  counter-reset: secondLevelList 5;
 }
-ol ol[start="6"] {
-	counter-reset: secondLevelList 5;
+#write blockquote ol[start="6"] {
+  counter-reset: blockquoteList 5;
 }
-blockquote ol[start="6"] {
-	counter-reset: blockquoteList 5;
+#write ol[start="7"] {
+  counter-reset: firstLevelList 6;
 }
-ol[start="7"] {
-	counter-reset: firstLevelList 6;
+#write ol ol[start="7"] {
+  counter-reset: secondLevelList 6;
 }
-ol ol[start="7"] {
-	counter-reset: secondLevelList 6;
+#write blockquote ol[start="7"] {
+  counter-reset: blockquoteList 6;
 }
-blockquote ol[start="7"] {
-	counter-reset: blockquoteList 6;
+#write ol[start="8"] {
+  counter-reset: firstLevelList 7;
 }
-ol[start="8"] {
-	counter-reset: firstLevelList 7;
+#write ol ol[start="8"] {
+  counter-reset: secondLevelList 7;
 }
-ol ol[start="8"] {
-	counter-reset: secondLevelList 7;
+#write blockquote ol[start="8"] {
+  counter-reset: blockquoteList 7;
 }
-blockquote ol[start="8"] {
-	counter-reset: blockquoteList 7;
+#write ol[start="9"] {
+  counter-reset: firstLevelList 8;
 }
-ol[start="9"] {
-	counter-reset: firstLevelList 8;
+#write ol ol[start="9"] {
+  counter-reset: secondLevelList 8;
 }
-ol ol[start="9"] {
-	counter-reset: secondLevelList 8;
+#write blockquote ol[start="9"] {
+  counter-reset: blockquoteList 8;
 }
-blockquote ol[start="9"] {
-	counter-reset: blockquoteList 8;
+#write ol[start="10"] {
+  counter-reset: firstLevelList 9;
 }
-ol[start="10"] {
-	counter-reset: firstLevelList 9;
+#write ol ol[start="10"] {
+  counter-reset: secondLevelList 9;
 }
-ol ol[start="10"] {
-	counter-reset: secondLevelList 9;
+#write blockquote ol[start="10"] {
+  counter-reset: blockquoteList 9;
 }
-blockquote ol[start="10"] {
-	counter-reset: blockquoteList 9;
+#write ol[start="11"] {
+  counter-reset: firstLevelList 10;
 }
-ol[start="11"] {
-	counter-reset: firstLevelList 10;
+#write ol ol[start="11"] {
+  counter-reset: secondLevelList 10;
 }
-ol ol[start="11"] {
-	counter-reset: secondLevelList 10;
+#write blockquote ol[start="11"] {
+  counter-reset: blockquoteList 10;
 }
-blockquote ol[start="11"] {
-	counter-reset: blockquoteList 10;
+#write ol[start="12"] {
+  counter-reset: firstLevelList 11;
 }
-ol[start="12"] {
-	counter-reset: firstLevelList 11;
+#write ol ol[start="12"] {
+  counter-reset: secondLevelList 11;
 }
-ol ol[start="12"] {
-	counter-reset: secondLevelList 11;
+#write blockquote ol[start="12"] {
+  counter-reset: blockquoteList 11;
 }
-blockquote ol[start="12"] {
-	counter-reset: blockquoteList 11;
+#write ol[start="13"] {
+  counter-reset: firstLevelList 12;
 }
-ol[start="13"] {
-	counter-reset: firstLevelList 12;
+#write ol ol[start="13"] {
+  counter-reset: secondLevelList 12;
 }
-ol ol[start="13"] {
-	counter-reset: secondLevelList 12;
+#write blockquote ol[start="13"] {
+  counter-reset: blockquoteList 12;
 }
-blockquote ol[start="13"] {
-	counter-reset: blockquoteList 12;
+#write ol[start="14"] {
+  counter-reset: firstLevelList 13;
 }
-ol[start="14"] {
-	counter-reset: firstLevelList 13;
+#write ol ol[start="14"] {
+  counter-reset: secondLevelList 13;
 }
-ol ol[start="14"] {
-	counter-reset: secondLevelList 13;
+#write blockquote ol[start="14"] {
+  counter-reset: blockquoteList 13;
 }
-blockquote ol[start="14"] {
-	counter-reset: blockquoteList 13;
+#write ol[start="15"] {
+  counter-reset: firstLevelList 14;
 }
-ol[start="15"] {
-	counter-reset: firstLevelList 14;
+#write ol ol[start="15"] {
+  counter-reset: secondLevelList 14;
 }
-ol ol[start="15"] {
-	counter-reset: secondLevelList 14;
+#write blockquote ol[start="15"] {
+  counter-reset: blockquoteList 14;
 }
-blockquote ol[start="15"] {
-	counter-reset: blockquoteList 14;
+#write ol[start="16"] {
+  counter-reset: firstLevelList 15;
 }
-ol[start="16"] {
-	counter-reset: firstLevelList 15;
+#write ol ol[start="16"] {
+  counter-reset: secondLevelList 15;
 }
-ol ol[start="16"] {
-	counter-reset: secondLevelList 15;
+#write blockquote ol[start="16"] {
+  counter-reset: blockquoteList 15;
 }
-blockquote ol[start="16"] {
-	counter-reset: blockquoteList 15;
+#write ol[start="17"] {
+  counter-reset: firstLevelList 16;
 }
-ol[start="17"] {
-	counter-reset: firstLevelList 16;
+#write ol ol[start="17"] {
+  counter-reset: secondLevelList 16;
 }
-ol ol[start="17"] {
-	counter-reset: secondLevelList 16;
+#write blockquote ol[start="17"] {
+  counter-reset: blockquoteList 16;
 }
-blockquote ol[start="17"] {
-	counter-reset: blockquoteList 16;
+#write ol[start="18"] {
+  counter-reset: firstLevelList 17;
 }
-ol[start="18"] {
-	counter-reset: firstLevelList 17;
+#write ol ol[start="18"] {
+  counter-reset: secondLevelList 17;
 }
-ol ol[start="18"] {
-	counter-reset: secondLevelList 17;
+#write blockquote ol[start="18"] {
+  counter-reset: blockquoteList 17;
 }
-blockquote ol[start="18"] {
-	counter-reset: blockquoteList 17;
+#write ol[start="19"] {
+  counter-reset: firstLevelList 18;
 }
-ol[start="19"] {
-	counter-reset: firstLevelList 18;
+#write ol ol[start="19"] {
+  counter-reset: secondLevelList 18;
 }
-ol ol[start="19"] {
-	counter-reset: secondLevelList 18;
+#write blockquote ol[start="19"] {
+  counter-reset: blockquoteList 18;
 }
-blockquote ol[start="19"] {
-	counter-reset: blockquoteList 18;
+#write ol[start="20"] {
+  counter-reset: firstLevelList 19;
 }
-ol[start="20"] {
-	counter-reset: firstLevelList 19;
+#write ol ol[start="20"] {
+  counter-reset: secondLevelList 19;
 }
-ol ol[start="20"] {
-	counter-reset: secondLevelList 19;
+#write blockquote ol[start="20"] {
+  counter-reset: blockquoteList 19;
 }
-blockquote ol[start="20"] {
-	counter-reset: blockquoteList 19;
+#write ol[start="21"] {
+  counter-reset: firstLevelList 20;
 }
-ol[start="21"] {
-	counter-reset: firstLevelList 20;
+#write ol ol[start="21"] {
+  counter-reset: secondLevelList 20;
 }
-ol ol[start="21"] {
-	counter-reset: secondLevelList 20;
+#write blockquote ol[start="21"] {
+  counter-reset: blockquoteList 20;
 }
-blockquote ol[start="21"] {
-	counter-reset: blockquoteList 20;
+#write ol[start="22"] {
+  counter-reset: firstLevelList 21;
 }
-ol[start="22"] {
-	counter-reset: firstLevelList 21;
+#write ol ol[start="22"] {
+  counter-reset: secondLevelList 21;
 }
-ol ol[start="22"] {
-	counter-reset: secondLevelList 21;
+#write blockquote ol[start="22"] {
+  counter-reset: blockquoteList 21;
 }
-blockquote ol[start="22"] {
-	counter-reset: blockquoteList 21;
+#write ol[start="23"] {
+  counter-reset: firstLevelList 22;
 }
-ol[start="23"] {
-	counter-reset: firstLevelList 22;
+#write ol ol[start="23"] {
+  counter-reset: secondLevelList 22;
 }
-ol ol[start="23"] {
-	counter-reset: secondLevelList 22;
+#write blockquote ol[start="23"] {
+  counter-reset: blockquoteList 22;
 }
-blockquote ol[start="23"] {
-	counter-reset: blockquoteList 22;
+#write ol[start="24"] {
+  counter-reset: firstLevelList 23;
 }
-ol[start="24"] {
-	counter-reset: firstLevelList 23;
+#write ol ol[start="24"] {
+  counter-reset: secondLevelList 23;
 }
-ol ol[start="24"] {
-	counter-reset: secondLevelList 23;
+#write blockquote ol[start="24"] {
+  counter-reset: blockquoteList 23;
 }
-blockquote ol[start="24"] {
-	counter-reset: blockquoteList 23;
+#write ol[start="25"] {
+  counter-reset: firstLevelList 24;
 }
-ol[start="25"] {
-	counter-reset: firstLevelList 24;
+#write ol ol[start="25"] {
+  counter-reset: secondLevelList 24;
 }
-ol ol[start="25"] {
-	counter-reset: secondLevelList 24;
+#write blockquote ol[start="25"] {
+  counter-reset: blockquoteList 24;
 }
-blockquote ol[start="25"] {
-	counter-reset: blockquoteList 24;
+#write ol[start="26"] {
+  counter-reset: firstLevelList 25;
 }
-ol[start="26"] {
-	counter-reset: firstLevelList 25;
+#write ol ol[start="26"] {
+  counter-reset: secondLevelList 25;
 }
-ol ol[start="26"] {
-	counter-reset: secondLevelList 25;
+#write blockquote ol[start="26"] {
+  counter-reset: blockquoteList 25;
 }
-blockquote ol[start="26"] {
-	counter-reset: blockquoteList 25;
+#write ol {
+  counter-reset: firstLevelList;
 }
-ol {
-	counter-reset: firstLevelList;
+#write ol blockquote {
+  background: #f7f8f9;
+  margin: 0;
+  padding: 0;
+  padding: 24px 40px;
+  margin-bottom: 30px;
+  border-left: none;
 }
-ol blockquote {
-	background: #f7f8f9;
-	margin: 0;
-	padding: 0;
-	padding: 24px 40px;
-	margin-bottom: 30px;
-	border-left: none;
+#write ol blockquote ul:last-child,
+#write ol blockquote li:last-child,
+#write ol blockquote p:last-child {
+  margin-bottom: 0;
 }
-ol blockquote ul:last-child, ol blockquote li:last-child, ol blockquote p:last-child {
-	margin-bottom: 0;
+#write ol > li h1,
+#write ol > li h2,
+#write ol > li h3 {
+  margin-bottom: 16px;
+  padding-left: 20px;
 }
-ol > li h1, ol > li h2, ol > li h3 {
-	margin-bottom: 16px;
-	padding-left: 20px;
+#write ol > li::before {
+  counter-increment: firstLevelList;
+  content: counter(firstLevelList);
+  font-family: "EuclidFlex", sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 24pt;
+  line-height: 28.5pt;
+  letter-spacing: 1px;
+  color: #44745e;
+  left: -25px;
 }
-ol > li::before {
-	counter-increment: firstLevelList;
-	content: counter(firstLevelList);
-	font-family: 'EuclidFlex', sans-serif;
-	font-style: normal;
-	font-weight: normal;
-	font-size: 24pt;
-	line-height: 28.5pt;
-	letter-spacing: 1px;
-	color: #44745e;
-	left: -25px;
+#write ol ol {
+  counter-reset: secondLevelList;
 }
-ol ol {
-	counter-reset: secondLevelList;
+#write ol ol > li {
+  padding-left: 0px;
 }
-ol ol > li {
-	padding-left: 0px;
+#write ol ol > li::before {
+  counter-increment: secondLevelList;
+  content: counter(firstLevelList) counter(secondLevelList, lower-alpha);
+  left: -40px;
+  font-size: 24px;
+  line-height: 28px;
 }
-ol ol > li::before {
-	counter-increment: secondLevelList;
-	content: counter(firstLevelList) counter(secondLevelList,lower-alpha);
-	left: -40px;
-	font-size: 24px;
-	line-height: 28px;
+#write blockquote ul ol {
+  counter-reset: blockquoteList;
 }
-blockquote ul ol {
-	counter-reset: blockquoteList;
+#write blockquote ul ol > li::before {
+  counter-increment: blockquoteList;
+  content: counter(blockquoteList, decimal);
 }
-blockquote ul ol > li::before {
-	counter-increment: blockquoteList;
-	content: counter(blockquoteList,decimal);
+#write blockquote ol {
+  counter-reset: blockquoteList;
+  margin: 0;
+  padding: 0;
+  margin-bottom: 12px;
+  padding-left: 40px;
 }
-blockquote ol {
-	counter-reset: blockquoteList;
-	margin: 0;
-	padding: 0;
-	margin-bottom: 12px;
-	padding-left: 40px;
+#write blockquote ol:last-child {
+  margin-bottom: 0;
 }
-blockquote ol:last-child {
-	margin-bottom: 0;
+#write blockquote ol > li::before {
+  counter-increment: blockquoteList;
+  content: counter(blockquoteList, lower-alpha);
+  color: #ff9d94;
+  font-size: 12px;
+  position: absolute;
+  line-height: 18px;
+  left: -25px;
 }
-blockquote ol > li::before {
-	counter-increment: blockquoteList;
-	content: counter(blockquoteList,lower-alpha);
-	color: #ff9d94;
-	font-size: 12px;
-	position: absolute;
-	line-height: 18px;
-	left: -25px;
+#write blockquote ol ol {
+  counter-reset: blockquoteList;
 }
-blockquote ol ol {
-	counter-reset: blockquoteList;
+#write blockquote ol ol > li::before {
+  counter-increment: blockquoteList;
+  content: counter(blockquoteList, decimal);
+  font-family: inherit;
 }
-blockquote ol ol > li::before {
-	counter-increment: blockquoteList;
-	content: counter(blockquoteList,decimal);
-	font-family: inherit;
-}
-blockquote ol a {
-	text-decoration: underline;
+#write blockquote ol a {
+  text-decoration: underline;
 }
